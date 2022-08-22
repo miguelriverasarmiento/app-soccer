@@ -10,8 +10,7 @@ export async function getSoccerLeagues() {
             if(!response.ok){
                 throw new NetworkError()
             }
-            const data = await response.json();
-            console.log(data);
+            const data = await response.json();    
             return data;
     } catch (err) {
         throw err;
@@ -31,12 +30,16 @@ export async function searchTeamPlayers(id = 33){
                 throw new NetworkError()
             }
             const data = await response.json();
-            console.log(data);
-            return data;
+            const players = data.response[0]?.players;
+            const result = Object.keys(players).map(key => ({
+                id: key, value: players[key]
+            }));
+            console.log(result);
+            return result;
     } catch (err) {
         throw err;
     }
-}
+} 
 
 export async function searchTeamStadium(id = 33){
     try {
@@ -50,8 +53,7 @@ export async function searchTeamStadium(id = 33){
             if(!response.ok){
                 throw new NetworkError()
             }
-            const data = await response.json();
-            console.log(data);
+            const data = await response.json();    
             return data;
     } catch (err) {
         throw err;
