@@ -11,7 +11,6 @@ export async function getSoccerLeagues() {
                 throw new NetworkError()
             }
             const data = await response.json();
-            console.log(data);
             return data;
     } catch (err) {
         throw err;
@@ -31,12 +30,16 @@ export async function searchTeamPlayers(id = 33){
                 throw new NetworkError()
             }
             const data = await response.json();
-            console.log(data);
-            return data;
+            const players = data.response[0]?.players;
+            const result = Object.keys(players).map(key => ({
+                id: key, value: players[key]
+            }));
+            console.log(result);
+            return result;
     } catch (err) {
         throw err;
     }
-}
+} 
 
 export async function searchTeamStadium(id = 33){
     try {
@@ -51,7 +54,26 @@ export async function searchTeamStadium(id = 33){
                 throw new NetworkError()
             }
             const data = await response.json();
-            console.log(data);
+            return data;
+    } catch (err) {
+        throw err;
+    }
+}
+
+export async function searchPlayerDetails(id = 882){
+    try {
+        const response = await fetch(`https://v3.football.api-sports.io/players?id=${id}&season=2022`, {
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "v3.football.api-sports.io",
+                "x-rapidapi-key": "5c42fdc9e107817b839c25662930d2c6"
+                }
+            });
+            if(!response.ok){
+                throw new NetworkError()
+            }
+            const data = await response.json();   
+            console.log(data); 
             return data;
     } catch (err) {
         throw err;

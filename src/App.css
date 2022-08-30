@@ -24,7 +24,14 @@
   width: 20%;
 }
 
+.TitleTeamsList {
+  width: 40%;
+  margin-top: 10px;
+  margin-left: 75px;
+}
+
 .InfoTeam {
+  position: relative;
   background-color: darkslategray;
   width: 80%;
   height: 80%;
@@ -59,18 +66,114 @@
 .DivDetailsTeam {
   border: 2px solid black;
   margin-top: -130px;
-  width: 350px;
+  width: 355px;
   height: 130px
 }
 
+.FeaturesTeamUl {
+  margin-top: 2px;
+  margin-left: 10px;
+  margin-bottom: 14px;
+  font-size: small;
+  line-height: 1.4;
+  list-style-type: none;
+}
+
+.FeaturesTeamLi {
+  margin-left: -38px;
+  margin-bottom: 3px;
+}
+
 .DivStadiumLogo {
-  width: 315px;
+  width: 359px;
   height: 253px;
-  
 }
 
 .StadiumLogo {
-  width: 314px;
-  height: 252px;
-  
+  width: 358px;
+  height: 244px;
+}
+/*------- arreglar----------*/
+
+.DivPlayersTeam {
+  position: absolute;
+  width: 21%;
+  height: 73%;
+  top: 124px;
+  left: 367px;
+  border: 2px solid black;
+}
+
+.TitleDivPlayers {
+  width: 50%;
+  margin-top: -20px;
+  margin-left: 58px;
+  margin-bottom: 0px;
+  padding-top: 5px;
+  font-size: 20px;
+}
+
+.PlayersTeamUl {
+  width: 90%;
+  padding-top: 0px;
+  padding-left: 15px;
+  font-size: small;
+  line-height: 1.4;
+  list-style-type: none;
+}
+
+.PlayersTeamLi {
+  margin-left: 1px;
+  margin-bottom: 3px;
+}
+
+.DivButtonsPag {
+  position: absolute;
+  height: 6%;
+  width: 10%;
+  top: 470px;
+  left: 428px;
+}
+
+.DivDetailsPlayer {
+  position: absolute;
+  width: 21%;
+  height: 73%;
+  top: 124px;
+  left: 608px;
+  border: 2px solid black;
+}
+
+.FeaturesPlayerUl {
+  width: 90%;
+  margin-top: 13px;
+  margin-left: -26px;
+  margin-bottom: 52px;
+  font-size: small;
+  line-height: 1.4;
+  list-style-type: none;
+}
+
+.DivDetailsPlayerTwo {
+  position: absolute;
+  width: 21%;
+  height: 73%;
+  top: 124px;
+  left: 849px;
+  border: 2px solid black;
+}
+
+.FeaturesPlayerUlTwo {
+  width: 92%;
+  margin-top: 2px;
+  margin-left: -26px;
+  margin-bottom: 26px;
+  font-size: small;
+  line-height: 1.4;
+  list-style-type: none;
+}
+
+.PlayersFeaturesLi {
+  margin-left: 1px;
+  margin-bottom: 2px;
 }

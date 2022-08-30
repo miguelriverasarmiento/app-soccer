@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
-import { getSoccerLeagues } from './api/soccer';
+import { getSoccerLeagues, searchTeamPlayers, searchTeamStadium } from './api/soccer';
 
   test('This should show a name of soccer league', async () => {
     render(<App />)
-    expect(await screen.getByText(/Premier League/i)).toBeInTheDocument();
+    expect(await screen.getByText(/Premier/i)).toBeInTheDocument();
   });
 
   test('This get a first team of teams list', async () => {
@@ -13,6 +13,18 @@ import { getSoccerLeagues } from './api/soccer';
       expect(list.response[0].team.name).toBe('Manchester United');
     });
   
+  test('This get a second player of team player list', async () => {
+    const list = await searchTeamPlayers();
+      console.log("Running test");
+      expect(list.response[0].players[1].name).toBe('David de Gea');
+    });
+
+  test('This get a stadium of the first team in list', async () => {
+    const list = await searchTeamStadium();
+      console.log("Running test");
+      expect(list.response[0].venue.name).toBe('Old Trafford');
+    });
+
   test('This should show a error message when there is a network error', async () => {
     jest.spyOn(window, 'fetch');
     window.fetch.mockRejectedValue(new Error ('Network Error'));
