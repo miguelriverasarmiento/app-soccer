@@ -25,11 +25,13 @@
 }
 
 .TitleTeamsList {
+  width: 40%;
   margin-top: 10px;
-  margin-left: 10px;
+  margin-left: 75px;
 }
 
 .InfoTeam {
+  position: relative;
   background-color: darkslategray;
   width: 80%;
   height: 80%;
@@ -91,41 +93,87 @@
   width: 358px;
   height: 244px;
 }
+/*------- arreglar----------*/
 
 .DivPlayersTeam {
+  position: absolute;
+  width: 21%;
+  height: 73%;
+  top: 124px;
+  left: 367px;
   border: 2px solid black;
-  margin-left: 34%;
-  margin-top: -388px;
-  width: 706px;
-  height: 375px
 }
+
 .TitleDivPlayers {
+  width: 50%;
   margin-top: -20px;
-  margin-left: 22px;
-  margin-bottom: -5px;
+  margin-left: 58px;
+  margin-bottom: 0px;
   padding-top: 5px;
   font-size: 20px;
 }
 
 .PlayersTeamUl {
-  margin-top: 0px;
-  margin-left: 10px;
-  margin-bottom: -690px;
+  width: 90%;
+  padding-top: 0px;
+  padding-left: 15px;
   font-size: small;
   line-height: 1.4;
   list-style-type: none;
 }
 
 .PlayersTeamLi {
-  margin-left: -38px;
+  margin-left: 1px;
   margin-bottom: 3px;
 }
 
 .DivButtonsPag {
-  border: 2px solid darkgray;
+  position: absolute;
   height: 6%;
-  width: 15%;
-  margin-right: 10px;
-  margin-left: 22px;
-  margin-top: 712px;
+  width: 10%;
+  top: 470px;
+  left: 428px;
+}
+
+.DivDetailsPlayer {
+  position: absolute;
+  width: 21%;
+  height: 73%;
+  top: 124px;
+  left: 608px;
+  border: 2px solid black;
+}
+
+.FeaturesPlayerUl {
+  width: 90%;
+  margin-top: 13px;
+  margin-left: -26px;
+  margin-bottom: 52px;
+  font-size: small;
+  line-height: 1.4;
+  list-style-type: none;
+}
+
+.DivDetailsPlayerTwo {
+  position: absolute;
+  width: 21%;
+  height: 73%;
+  top: 124px;
+  left: 849px;
+  border: 2px solid black;
+}
+
+.FeaturesPlayerUlTwo {
+  width: 92%;
+  margin-top: 2px;
+  margin-left: -26px;
+  margin-bottom: 26px;
+  font-size: small;
+  line-height: 1.4;
+  list-style-type: none;
+}
+
+.PlayersFeaturesLi {
+  margin-left: 1px;
+  margin-bottom: 2px;
 }

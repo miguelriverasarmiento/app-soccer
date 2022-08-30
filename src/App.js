@@ -15,7 +15,6 @@ function App() {
   const [teamStadium, setTeamStadium] = useState({});
   const [errorState, setErrorState] = useState({ hasError: false });
   const [currentPage, setCurrentPage] = useState(0);
-
   const [playersForPage, setPlayersForPage] = useState([]);
 
   useEffect(() => {
