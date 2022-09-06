@@ -44,7 +44,7 @@ function App() {
     setErrorState({hasError: true, message: err.message}); 
   }
   
-  function handleDetails(lea){
+  function handleDetailsTeam(lea){
     const id = lea.team.id;
     setIdTeam(id);
     setIdTeamStadium(id);
@@ -74,10 +74,10 @@ function App() {
       </div>
       <div className='List'>
         <h2 className='TitleTeamsList'>Equipos</h2>
-        <ul>
+        <ul className='TeamsUl'>
           {errorState.hasError && <div>{errorState.message}</div>}
           {league.map((lea) => (
-            <li key={lea.team.id} onClick={() => handleDetails(lea)}>{lea.team.name}</li>
+            <li className='TeamsLi' key={lea.team.id} onClick={() => handleDetailsTeam(lea)}>{lea.team.name}</li>
           ))}
         </ul>
       </div>
@@ -86,15 +86,21 @@ function App() {
         <div className='DivTitleTeam' ><h3 className='TitleTeam'>{teamStadium[0]?.team?.name}</h3></div>
         <div className='DivDetailsTeam'>
           <ul className='FeaturesTeamUl'>
-            <li className='FeaturesTeamLi'>Fundado: Año {teamStadium[0]?.team?.founded}</li>
-            <li className='FeaturesTeamLi'>Ciudad: {teamStadium[0]?.venue?.city}</li>
-            <li className='FeaturesTeamLi'>Estadio: {teamStadium[0]?.venue?.name}</li>
-            <li className='FeaturesTeamLi'>Capacidad: {teamStadium[0]?.venue?.capacity} espectadores</li>
-            <li className='FeaturesTeamLi'>Direccion: {teamStadium[0]?.venue?.address}</li>
+            <li className='FeaturesTeamLi'><b>Fundado:</b> Año {teamStadium[0]?.team?.founded}</li>
+            <li className='FeaturesTeamLi'><b>Ciudad:</b> {teamStadium[0]?.venue?.city}</li>
+            <li className='FeaturesTeamLi'><b>Estadio:</b> {teamStadium[0]?.venue?.name}</li>
+            <li className='FeaturesTeamLi'><b>Capacidad:</b> {teamStadium[0]?.venue?.capacity} espectadores</li>
+            <li className='FeaturesTeamLi'><b>Direccion:</b> {teamStadium[0]?.venue?.address}</li>
           </ul>
         </div>
         <div className='DivStadiumLogo'><img src={teamStadium[0]?.venue?.image} className='StadiumLogo'/></div>
-        <Players currentPage={currentPage} players={playersForPage} nextHandler={nextHandler} prevHandler={prevHandler}></Players>
+        <Players 
+          currentPage={currentPage} 
+          players={playersForPage} 
+          nextHandler={nextHandler} 
+          prevHandler={prevHandler}
+          idTeam={idTeam}
+        ></Players>
       </div>
     </div>
   );
