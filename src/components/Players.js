@@ -1,17 +1,22 @@
 import { useEffect, useState } from 'react';
-import { searchPlayerDetails } from '../api/soccer';
+import { searchPlayerDetails, searchTeamPlayerOne } from '../api/soccer';
 import '../App.css';
 
 const Players = (props) => {
 
     const [idPlay, setIdPlay] = useState(882);
     const [playerDetails, setPlayerDetails] = useState({});
-
+    
     useEffect(() => {
         searchPlayerDetails(idPlay)
             .then((data) => setPlayerDetails(data.response))
     }, [idPlay]);
 
+    useEffect(() => {
+        searchTeamPlayerOne(props.idTeam)
+            .then((data) => setIdPlay(data))
+    }, [props.idTeam]);
+    
     const players = props.players.map((item, index) => {
         return <li onClick={() => handlePlayer(item)} className='PlayersTeamLi' key={item.id}>{item.value.name}</li>
     });
@@ -20,7 +25,7 @@ const Players = (props) => {
         const idPlayer = item.value.id;
         setIdPlay(idPlayer);
     }
-    
+
     return(
     <>
         <div className='DivPlayersTeam'>
@@ -33,37 +38,38 @@ const Players = (props) => {
         </div>
         <div className='DivButtonsPag'>
             <button onClick={props.prevHandler}>Prev</button>
-                {props.currentPage}
+                <b>{props.currentPage}</b>
             <button onClick={props.nextHandler}>Next</button>
         </div>
         <div className='DivDetailsPlayer'>
             <div><img src={playerDetails[0]?.player?.photo} /></div>
             <ul className='FeaturesPlayerUl'>
-                <li className='PlayersTeamLi'>Nombre: {playerDetails[0]?.player?.firstname}</li>
-                <li className='PlayersTeamLi'>Apellido: {playerDetails[0]?.player?.lastname}</li>
-                <li className='PlayersTeamLi'>Edad: {playerDetails[0]?.player?.age} años</li>
-                <li className='PlayersTeamLi'>Altura: {playerDetails[0]?.player?.height}</li>
-                <li className='PlayersTeamLi'>Peso: {playerDetails[0]?.player?.weight}</li>
-                <li className='PlayersTeamLi'>Nacionalidad: {playerDetails[0]?.player?.nationality}</li>
-                <li className='PlayersTeamLi'>Numero: {playerDetails[0]?.statistics[0]?.games?.number}</li>
+                <li className='PlayersTeamLi'><b>Nombre:</b> {playerDetails[0]?.player?.firstname}</li>
+                <li className='PlayersTeamLi'><b>Apellido:</b> {playerDetails[0]?.player?.lastname}</li>
+                <li className='PlayersTeamLi'><b>Edad:</b> {playerDetails[0]?.player?.age} años</li>
+                <li className='PlayersTeamLi'><b>Altura:</b> {playerDetails[0]?.player?.height}</li>
+                <li className='PlayersTeamLi'><b>Peso:</b> {playerDetails[0]?.player?.weight}</li>
+                <li className='PlayersTeamLi'><b>Nacionalidad:</b> {playerDetails[0]?.player?.nationality}</li>
+                <li className='PlayersTeamLi'><b>Numero:</b> {playerDetails[0]?.statistics[0]?.games?.number}</li>
             </ul>
         </div>
         <div className='DivDetailsPlayerTwo'>
             {playerDetails[0]?.statistics[0]?.games?.position === "Goalkeeper" &&
                 <ul className='FeaturesPlayerUlTwo'>
-                    <li className='PlayersTeamLi'>Posición: {playerDetails[0]?.statistics[0]?.games?.position}</li>
-                    <li className='PlayersTeamLi'>Numero: {playerDetails[0]?.statistics[0]?.games?.number}</li>
-                    <li className='PlayersTeamLi'>Apariciones: {playerDetails[0]?.statistics[0]?.games?.appearences}</li>
-                    <li className='PlayersTeamLi'>Minutos: {playerDetails[0]?.statistics[0]?.games?.minutes}</li>
-                    <li className='PlayersTeamLi'>Asistencias: {playerDetails[0]?.statistics[0]?.goals?.assists}</li>
-                    <li className='PlayersTeamLi'>Precision de pases: {playerDetails[0]?.statistics[0]?.passes?.accuracy}</li>
-                    <li className='PlayersTeamLi'>Goles recibidos: {playerDetails[0]?.statistics[0]?.goals?.conceded}</li>
-                    <li className='PlayersTeamLi'>Remates atajados: {playerDetails[0]?.statistics[0]?.goals?.saves}</li>
-                    <li className='PlayersTeamLi'>Penaltis comprometidos: {playerDetails[0]?.statistics[0]?.penalty?.commited}</li>
-                    <li className='PlayersTeamLi'>Penaltis perdidos: {playerDetails[0]?.statistics[0]?.penalty?.missed}</li>
-                    <li className='PlayersTeamLi'>Penaltis atajados: {playerDetails[0]?.statistics[0]?.penalty?.saved}</li>
-                    <li className='PlayersTeamLi'>Tarjetas amarillas: {playerDetails[0]?.statistics[0]?.cards?.yellow}</li>
-                    <li className='PlayersTeamLi'>Tarjetas rojas: {playerDetails[0]?.statistics[0]?.cards?.red}</li>
+                    <li className='PlayersTeamLi'><b>Posición:</b> {playerDetails[0]?.statistics[0]?.games?.position}</li>
+                    <li className='PlayersTeamLi'><b>Apariciones:</b> {playerDetails[0]?.statistics[0]?.games?.appearences}</li>
+                    <li className='PlayersTeamLi'><b>Minutos:</b> {playerDetails[0]?.statistics[0]?.games?.minutes}</li>
+                    <li className='PlayersTeamLi'><b>Asistencias:</b> {playerDetails[0]?.statistics[0]?.goals?.assists}</li>
+                    <li className='PlayersTeamLi'><b>Precision de pases:</b> {playerDetails[0]?.statistics[0]?.passes?.accuracy}%</li>
+                    <li className='PlayersTeamLi'><b>Goles recibidos:</b> {playerDetails[0]?.statistics[0]?.goals?.conceded}</li>
+                    <li className='PlayersTeamLi'><b>Remates atajados:</b> {playerDetails[0]?.statistics[0]?.goals?.saves}</li>
+                    <li className='PlayersTeamLi'><b>Entradas bloqueadas:</b> {playerDetails[0]?.statistics[0]?.tackles?.blocks}</li>
+                    <li className='PlayersTeamLi'><b>Faltas cometidas:</b> {playerDetails[0]?.statistics[0]?.fouls?.committed}</li>
+                    <li className='PlayersTeamLi'><b>Penaltis comprometidos:</b> {playerDetails[0]?.statistics[0]?.penalty?.commited}</li>
+                    <li className='PlayersTeamLi'><b>Penaltis perdidos:</b> {playerDetails[0]?.statistics[0]?.penalty?.missed}</li>
+                    <li className='PlayersTeamLi'><b>Penaltis atajados:</b> {playerDetails[0]?.statistics[0]?.penalty?.saved}</li>
+                    <li className='PlayersTeamLi'><b>Tarjetas amarillas:</b> {playerDetails[0]?.statistics[0]?.cards?.yellow}</li>
+                    <li className='PlayersTeamLi'><b>Tarjetas rojas:</b> {playerDetails[0]?.statistics[0]?.cards?.red}</li>
                 </ul>
             }
             {playerDetails[0]?.statistics[0]?.games?.position === "Defender" &&
@@ -78,7 +84,7 @@ const Players = (props) => {
                     <li className='PlayersFeaturesLi'>Penaltis anotados: {playerDetails[0]?.statistics[0]?.penalty?.scored}</li>
                     <li className='PlayersFeaturesLi'>Penaltis comprometidos: {playerDetails[0]?.statistics[0]?.penalty?.commited}</li>
                     <li className='PlayersFeaturesLi'>Penaltis perdidos: {playerDetails[0]?.statistics[0]?.penalty?.missed}</li>
-                    <li className='PlayersFeaturesLi'>Precision de pases: {playerDetails[0]?.statistics[0]?.passes?.accuracy}</li>
+                    <li className='PlayersFeaturesLi'>Precision de pases: {playerDetails[0]?.statistics[0]?.passes?.accuracy}%</li>
                     <li className='PlayersFeaturesLi'>Entradas bloqueadas: {playerDetails[0]?.statistics[0]?.tackles?.blocks}</li>
                     <li className='PlayersFeaturesLi'>Pases interceptados: {playerDetails[0]?.statistics[0]?.tackles?.interceptions}</li>
                     <li className='PlayersFeaturesLi'>Tarjetas amarillas: {playerDetails[0]?.statistics[0]?.cards?.yellow}</li>
@@ -98,7 +104,7 @@ const Players = (props) => {
                     <li className='PlayersFeaturesLi'>Penaltis anotados: {playerDetails[0]?.statistics[0]?.penalty?.scored}</li>
                     <li className='PlayersFeaturesLi'>Penaltis comprometidos: {playerDetails[0]?.statistics[0]?.penalty?.commited}</li>
                     <li className='PlayersFeaturesLi'>Penaltis perdidos: {playerDetails[0]?.statistics[0]?.penalty?.missed}</li>
-                    <li className='PlayersFeaturesLi'>Precision de pases: {playerDetails[0]?.statistics[0]?.passes?.accuracy}</li>
+                    <li className='PlayersFeaturesLi'>Precision de pases: {playerDetails[0]?.statistics[0]?.passes?.accuracy}%</li>
                     <li className='PlayersFeaturesLi'>Pases interceptados: {playerDetails[0]?.statistics[0]?.tackles?.interceptions}</li>
                     <li className='PlayersFeaturesLi'>Tarjetas amarillas: {playerDetails[0]?.statistics[0]?.cards?.yellow}</li>
                     <li className='PlayersFeaturesLi'>Tarjetas rojas: {playerDetails[0]?.statistics[0]?.cards?.red}</li>
@@ -117,7 +123,7 @@ const Players = (props) => {
                     <li className='PlayersFeaturesLi'>Penaltis anotados: {playerDetails[0]?.statistics[0]?.penalty?.scored}</li>
                     <li className='PlayersFeaturesLi'>Penaltis comprometidos: {playerDetails[0]?.statistics[0]?.penalty?.commited}</li>
                     <li className='PlayersFeaturesLi'>Penaltis perdidos: {playerDetails[0]?.statistics[0]?.penalty?.missed}</li>
-                    <li className='PlayersFeaturesLi'>Precision de pases: {playerDetails[0]?.statistics[0]?.passes?.accuracy}</li>
+                    <li className='PlayersFeaturesLi'>Precision de pases: {playerDetails[0]?.statistics[0]?.passes?.accuracy}%</li>
                     <li className='PlayersFeaturesLi'>Pases interceptados: {playerDetails[0]?.statistics[0]?.tackles?.interceptions}</li>
                     <li className='PlayersFeaturesLi'>Tarjetas amarillas: {playerDetails[0]?.statistics[0]?.cards?.yellow}</li>
                     <li className='PlayersFeaturesLi'>Tarjetas rojas: {playerDetails[0]?.statistics[0]?.cards?.red}</li>

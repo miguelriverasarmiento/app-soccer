@@ -34,7 +34,6 @@ export async function searchTeamPlayers(id = 33){
             const result = Object.keys(players).map(key => ({
                 id: key, value: players[key]
             }));
-            console.log(result);
             return result;
     } catch (err) {
         throw err;
@@ -72,13 +71,32 @@ export async function searchPlayerDetails(id = 882){
             if(!response.ok){
                 throw new NetworkError()
             }
-            const data = await response.json();   
-            console.log(data); 
+            const data = await response.json();
             return data;
     } catch (err) {
         throw err;
     }
 }
+
+export async function searchTeamPlayerOne(id = 33){
+    try {
+        const response = await fetch(`https://v3.football.api-sports.io/players/squads?team=${id}`, {
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "v3.football.api-sports.io",
+                "x-rapidapi-key": "5c42fdc9e107817b839c25662930d2c6"
+                }
+            });
+            if(!response.ok){
+                throw new NetworkError()
+            }
+            const data = await response.json();
+            const player = data.response[0].players[0].id;
+            return player;
+    } catch (err) {
+        throw err;
+    }
+} 
 
 class NetworkError extends Error {
     constructor(){
