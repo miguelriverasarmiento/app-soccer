@@ -8,7 +8,7 @@ export function Layout() {
         <div className='HeaderPage'>
           <h1 className='TitlePage'>Premier</h1><img src={logoPremier} className='LogoPremier'/><h1 className='TitlePage'>League</h1>
           <div className='PageMenu'>
-            <Link to="/">Equipos</Link><Link to="/positions">Posiciones</Link>
+            <Link to="/">Equipos</Link><Link to="/positions">Posiciones</Link><Link to="/matches">Resultados</Link>
           </div>
         </div>
       </nav>

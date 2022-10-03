@@ -12,7 +12,6 @@ export async function positionsDb() {
             }
             const data = await response.json();
             const standings = data.response[0].league.standings[0];
-            console.log(standings);
             return standings;
     } catch(err) {
         throw err;
