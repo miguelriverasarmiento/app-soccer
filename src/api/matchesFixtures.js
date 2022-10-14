@@ -37,7 +37,6 @@ export async function lastTenGames() {
     } catch(err) {
         throw err;
     }
-
 }
 
 class NetworkError extends Error {
