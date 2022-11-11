@@ -212,7 +212,7 @@
   margin-left: 1018px;
 }
 
-a {
+.LayoutsLink {
   margin-left: 1px;
   margin-right: 2px;
   background-color: #102638;
@@ -491,7 +491,7 @@ thead th:nth-child(1) {
 .StatusElapsed {
   width: 30px;
   height: 30px;
-  margin-top: 35px;
+  margin-top: 45px;
   margin-left: 30px;
   position: absolute;
   font-size: 15px;
@@ -524,3 +524,80 @@ thead th:nth-child(1) {
   font-size: 13px;
 }
 
+/* .............................alineaciones de equipos........................... */
+
+.LinkMatchId {
+  text-decoration: none;
+  color: #aeaec1;
+}
+
+.ContainerLineups {
+  margin-top: 0px;
+  position: relative;
+}
+
+.DivTitleLineups {
+  width: 450px;
+  height: 28px;
+  position: absolute;
+  margin-left: 577px;
+  margin-top: 40px;
+}
+
+.TitleLineups {
+  width: 450px;
+  height: 20px;
+  font-size: 18px;
+}
+
+.DivLineupsHome {
+  width: 508px;
+  height: 288px;
+  margin-top: 192px;
+  margin-left: 120px;
+  position: absolute;
+}
+
+.DivLineupsAway {
+  width: 508px;
+  height: 288px;
+  margin-top: 192px;
+  margin-left: 720px;
+  position: absolute;
+}
+
+.DivgridHome {
+  width: 508px;
+  height: 288px;
+  background-color: #206C3F;
+  color: #fff;
+  border-radius: 10px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 10px;
+}
+
+.DivgridAway {
+  width: 508px;
+  height: 288px;
+  background-color: #206C3F;
+  color: #fff;
+  border-radius: 10px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 10px;
+}
+
+.Player {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.Player-goalkeeper {
+  grid-row: span 12; 
+}
+
+.Player-goalkeeperAway {
+  grid-row: span 12; 
+}
