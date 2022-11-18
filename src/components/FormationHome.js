@@ -24,6 +24,10 @@ const FormationHome = (props) => {
         if (item === "3-5-2") {
             formation352();
         }
+
+        if (item === "5-3-2") {
+            formation532();
+        }
             
         if (item === "4-2-3-1") {
             formation4231();
@@ -111,6 +115,31 @@ const FormationHome = (props) => {
             span15[i].style.setProperty("grid-row", "span 15");
         }
     }
+
+    function formation532() {
+
+        const span30 = document.getElementsByClassName('Player-goalkeeper')[0];
+        span30.style.setProperty('grid-row', 'span 30');
+
+        const span6 = document.querySelectorAll(".Player-one, .Player-two, .Player-three, .Player-four, .Player-five");
+
+        const span10 = document.querySelectorAll(".Player-six, .Player-seven, .Player-eight");
+
+        const span15 = document.querySelectorAll(".Player-nine, .Player-ten");
+        
+        for (var i = 0, lin = span6.length; i < lin; i++) {
+            span6[i].style.setProperty("grid-row", "span 6");
+        }
+
+        for (var i = 0, lin = span10.length; i < lin; i++) {
+            span10[i].style.setProperty("grid-row", "span 10");
+        }
+
+        for (var i = 0, lin = span15.length; i < lin; i++) {
+            span15[i].style.setProperty("grid-row", "span 15");
+        }
+    }
+
     function formation4231() {
 
         const span3 = document.querySelectorAll(".Player-one, .Player-two, .Player-three, .Player-four");
@@ -220,10 +249,10 @@ return(
         {lineupTeam(lineups[0]?.formation)}
         <div className='DivgridHome'>
             <div className="Player Player-goalkeeper">{lineups[0]?.startXI[0]?.player?.name}</div>
-            <div className="Player Player-one">{lineups[0]?.startXI[4]?.player?.name}</div>
+            <div className="Player Player-one">{lineups[0]?.startXI[1]?.player?.name}</div>
             <div className="Player Player-two">{lineups[0]?.startXI[2]?.player?.name}</div>
             <div className="Player Player-three">{lineups[0]?.startXI[3]?.player?.name}</div>
-            <div className="Player Player-four">{lineups[0]?.startXI[1]?.player?.name}</div>
+            <div className="Player Player-four">{lineups[0]?.startXI[4]?.player?.name}</div>
             <div className="Player Player-five">{lineups[0]?.startXI[5]?.player?.name}</div>
             <div className="Player Player-six">{lineups[0]?.startXI[6]?.player?.name}</div>  
             <div className="Player Player-seven">{lineups[0]?.startXI[7]?.player?.name}</div>

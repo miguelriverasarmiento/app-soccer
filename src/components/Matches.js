@@ -1,4 +1,4 @@
-import { matchesFixtures, lastTenGames, roundsLeague } from '../api/matchesFixtures';
+import { matchesFixtures, lastTenGames } from '../api/matchesFixtures';
 import { Link } from "react-router-dom";
 import { useEffect, useState } from 'react';
 
@@ -47,7 +47,7 @@ export function Matches() {
             return "Finalizado"
         }else if (item === "Match Postponed") {
             return "Pospuesto"
-        }else if (item === "First Half") {
+        }else if (item === "First Half" || "Halftime") {
             return "Medio tiempo"
         }else if (item === "Second Half") {
             return "Tiempo completo"

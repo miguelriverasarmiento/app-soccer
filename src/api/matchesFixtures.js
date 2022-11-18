@@ -11,7 +11,7 @@ export async function matchesFixtures() {
                 throw new NetworkError()
             }
             const data = await response.json();
-            
+            console.log(data);
             return data;
     } catch(err) {
         throw err;
@@ -32,7 +32,6 @@ export async function lastTenGames() {
                 throw new NetworkError()
             }
             const data = await response.json();
-            
             return data;
     } catch(err) {
         throw err;
@@ -52,7 +51,6 @@ export async function lineupsMatches(idFixture) {
                 throw new NetworkError()
             }
             const data = await response.json();
-            
             console.log(data);
             return data;
             
@@ -60,6 +58,49 @@ export async function lineupsMatches(idFixture) {
     } catch(err) {
         throw err;
     }
+}
+
+export async function eventsMatches(idFixture) {
+    try {
+        const response = await fetch(`https://v3.football.api-sports.io/fixtures/events?fixture=${idFixture}`, {
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "v3.football.api-sports.io",
+                "x-rapidapi-key": "5c42fdc9e107817b839c25662930d2c6"
+                }
+            });
+            if(!response.ok) {
+                throw new NetworkError()
+            }
+            const data = await response.json();
+            console.log(data);
+            return data;
+            
+            
+    } catch(err) {
+        throw err;
+    }
+}
+
+export async function matchesScore(idFixt) {
+    try {
+        const response = await fetch(`https://v3.football.api-sports.io/fixtures?id=${idFixt}`, {
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "v3.football.api-sports.io",
+                "x-rapidapi-key": "5c42fdc9e107817b839c25662930d2c6"
+                }
+            });
+            if(!response.ok) {
+                throw new NetworkError()
+            }
+            const data = await response.json();
+            console.log(data);
+            return data;
+    } catch(err) {
+        throw err;
+    }
+
 }
 
 class NetworkError extends Error {

@@ -22,7 +22,7 @@ export function Positions() {
                     <table>
                         <thead>
                             <tr>
-                                <th>Club</th>
+                                <th className="TheadThPos">Club</th>
                                 <th>PJ</th>
                                 <th>G</th>
                                 <th>E</th>

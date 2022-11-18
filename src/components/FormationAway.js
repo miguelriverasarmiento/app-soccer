@@ -24,6 +24,10 @@ const FormationAway = (props) => {
         if (item === "3-5-2") {
             formation352();
         }
+
+        if (item === "5-3-2") {
+            formation532();
+        }
             
         if (item === "4-2-3-1") {
             formation4231();
@@ -108,6 +112,30 @@ const FormationAway = (props) => {
 
         for (var i = 0, lin = span6Away.length; i < lin; i++) {
             span6Away[i].style.setProperty("grid-row", "span 6");
+        }
+
+        for (var i = 0, lin = span15Away.length; i < lin; i++) {
+            span15Away[i].style.setProperty("grid-row", "span 15");
+        }
+    }
+
+    function formation532() {
+
+        const span30Away = document.getElementsByClassName('Player-goalkeeperAway')[0];
+        span30Away.style.setProperty('grid-row', 'span 30');
+
+        const span6Away = document.querySelectorAll(".Player-oneAway, .Player-twoAway, .Player-threeAway, .Player-fourAway, .Player-fiveAway");
+
+        const span10Away = document.querySelectorAll(".Player-sixAway, .Player-sevenAway, .Player-eightAway");
+
+        const span15Away = document.querySelectorAll(".Player-nineAway, .Player-tenAway");
+        
+        for (var i = 0, lin = span6Away.length; i < lin; i++) {
+            span6Away[i].style.setProperty("grid-row", "span 6");
+        }
+
+        for (var i = 0, lin = span10Away.length; i < lin; i++) {
+            span10Away[i].style.setProperty("grid-row", "span 10");
         }
 
         for (var i = 0, lin = span15Away.length; i < lin; i++) {
