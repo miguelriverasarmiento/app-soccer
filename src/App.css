@@ -267,7 +267,7 @@ td {
   border-top: 1px solid transparent;
 }
 
-thead th:nth-child(1) {
+.TheadThPos {
   width: 65%;
 }
 
@@ -541,7 +541,7 @@ thead th:nth-child(1) {
   height: 28px;
   position: absolute;
   margin-left: 577px;
-  margin-top: 40px;
+  margin-top: 28px;
 }
 
 .TitleLineups {
@@ -569,7 +569,8 @@ thead th:nth-child(1) {
 .DivgridHome {
   width: 508px;
   height: 288px;
-  background-color: #206C3F;
+  background-color: #148003;
+  border-bottom: 2px solid #15450D;
   color: #fff;
   border-radius: 10px;
   display: grid;
@@ -580,7 +581,8 @@ thead th:nth-child(1) {
 .DivgridAway {
   width: 508px;
   height: 288px;
-  background-color: #206C3F;
+  background-color: #148003;
+  border-bottom: 2px solid #15450D;
   color: #fff;
   border-radius: 10px;
   display: grid;
@@ -589,9 +591,10 @@ thead th:nth-child(1) {
 }
 
 .Player {
-  align-items: center;
   display: flex;
+  align-items: center;
   justify-content: center;
+  font-size: 13px;
 }
 
 .Player-goalkeeper {
@@ -600,4 +603,160 @@ thead th:nth-child(1) {
 
 .Player-goalkeeperAway {
   grid-row: span 12; 
+}
+
+.DivNameTeamHome {
+  width: 490px;
+  height: 138px;
+  margin-top: 70px;
+  margin-left: 129px;
+  position: absolute;
+}
+
+.DivNameTeamAway {
+  width: 490px;
+  height: 138px;
+  margin-top: 70px;
+  margin-left: 725px;
+  position: absolute;
+}
+
+.ClubLogoLineups {
+  width: 490px;
+  height: 60px;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.TeamLogoLineups {
+  width: 55px;
+  height: 55px;
+}
+
+.ClubNameLineupsHome {
+  width: 490px;
+  height: 30px;
+  padding-top: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+}
+
+.ClubNameLineupsAway {
+  width: 490px;
+  height: 30px;
+  padding-top: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+}
+
+.Formation {
+  float: right;
+  margin-right: 5px;
+  font-size: 15px;
+  color: #102638;
+}
+
+.ClubCoachLineups {
+  float: left;
+  width: 245px;
+  height: 20px;
+  padding-top: 24px;
+  margin-left: 2px;
+  font-size: 15px;
+}
+
+.DivMark {
+  width: 118px;
+  height: 54px;
+  margin-top: 527px;
+  margin-left: 614px;
+  position: absolute;
+  font-size: 50px;
+  text-align: center;
+  box-shadow: 0px 1px 1px 1px black;
+}
+
+.DivScoreMatch {
+  width: 620px;
+  height: 340px;
+  margin-top: 603px;
+  margin-left: 353px;
+  position: absolute;
+}
+
+.EventsTable {
+  width: 652px;
+  height: 340px;
+  margin-top: 2px;
+  font-size: 13px;
+  position: absolute;
+}
+
+.ThEventOne {
+  width: 30px;
+}
+
+.ThEventTwo {
+  width: 30px;
+}
+
+.ThEventThree {
+  width: 70px;
+}
+
+.ThEventFour {
+  width: 30px;
+}
+
+.DivSubtitutesHome {
+  width: 155px;
+  height: 210px;
+  margin-top: 607px;
+  margin-left: 163px;
+  position: absolute;
+  font-size: 15px;
+  background-color: rgba(120, 145, 145, 1);
+  box-shadow: 0px 1px 1px 1px black;
+}
+
+.DivSubtitutesAway {
+  width: 155px;
+  height: 210px;
+  margin-top: 607px;
+  margin-left: 1040px;
+  position: absolute;
+  font-size: 15px;
+  background-color: rgba(120, 145, 145, 1);
+  box-shadow: 0px 1px 1px 1px black;
+}
+
+.NumberPlaySust {
+  width: 30px;
+  height: 20px;
+  text-align: center;
+}
+
+.NamePlaySust {
+  width: 118px;
+  height: 20px;
+  margin-top: -20px;
+  margin-left: 34px;
+  text-align: left;
+}
+
+.TitleSust {
+  width: 118px;
+  height: 20px;
+  margin-top: 3px;
+  margin-left: 6px;
+}
+
+.TrActionsMatch {
+  height: 30px;
 }
