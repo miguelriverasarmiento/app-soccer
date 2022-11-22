@@ -11,6 +11,7 @@ export async function getSoccerLeagues() {
                 throw new NetworkError()
             }
             const data = await response.json();
+            console.log(data);
             return data;
     } catch (err) {
         throw err;
@@ -93,6 +94,25 @@ export async function searchTeamPlayerOne(id = 33){
             const data = await response.json();
             const player = data.response[0].players[0].id;
             return player;
+    } catch (err) {
+        throw err;
+    }
+}
+
+export async function searchTeamPlayersNumbers(id = 33){
+    try {
+        const response = await fetch(`https://v3.football.api-sports.io/players/squads?player=${id}`, {
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "v3.football.api-sports.io",
+                "x-rapidapi-key": "5c42fdc9e107817b839c25662930d2c6"
+                }
+            });
+            if(!response.ok){
+                throw new NetworkError()
+            }
+            const data = await response.json();
+            return data;
     } catch (err) {
         throw err;
     }

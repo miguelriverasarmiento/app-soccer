@@ -11,7 +11,6 @@ export async function matchesFixtures() {
                 throw new NetworkError()
             }
             const data = await response.json();
-            console.log(data);
             return data;
     } catch(err) {
         throw err;
@@ -51,7 +50,6 @@ export async function lineupsMatches(idFixture) {
                 throw new NetworkError()
             }
             const data = await response.json();
-            console.log(data);
             return data;
             
             
@@ -73,7 +71,6 @@ export async function eventsMatches(idFixture) {
                 throw new NetworkError()
             }
             const data = await response.json();
-            console.log(data);
             return data;
             
             
@@ -95,7 +92,6 @@ export async function matchesScore(idFixt) {
                 throw new NetworkError()
             }
             const data = await response.json();
-            console.log(data);
             return data;
     } catch(err) {
         throw err;

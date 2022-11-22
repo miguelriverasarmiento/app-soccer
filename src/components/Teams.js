@@ -73,7 +73,9 @@ export function Teams() {
         <ul className='TeamsUl'>
           {errorState.hasError && <div>{errorState.message}</div>}
           {league.map((lea) => (
-            <li className='TeamsLi' key={lea.team.id} onClick={() => handleDetailsTeam(lea)}>{lea.team.name}</li>
+            <li className='TeamsLi' key={lea.team.id} onClick={() => handleDetailsTeam(lea)}>
+              <div className='DivLeagueTeamLogo'><img src={lea.team?.logo} className='LeagueTeamLogo'/></div> <div className='LeagueTeamName'>{lea.team.name}</div>
+            </li>
           ))}
         </ul>
       </div>
