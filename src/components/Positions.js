@@ -1,10 +1,14 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { positionsDb } from '../api/positionsDb';
+import Scorers from './Scorers';
+import Assists from './Assists';
 
 export function Positions() {
 
     const [table, setTable] = useState([]);
 
+    const tableMemo = useMemo(() => table, [table]);
+    
     useEffect(() => {
         positionsDb()
             .then((data) => setTable(data))
@@ -12,12 +16,12 @@ export function Positions() {
     }, []);
 
     return(
-
         <>
             <div className="BodyPos">
                 <div className="DivTitlePos">
                     <h1 className='TitlePositions'>Tabla de posiciones temporada 2022-23</h1>
                 </div>
+                <Scorers></Scorers>
                 <div className='DivTable'>
                     <table>
                         <thead>
@@ -34,7 +38,7 @@ export function Positions() {
                             </tr>
                         </thead>
                         <tbody>
-                            {table.map((pos) => (
+                            {tableMemo.map((pos) => (
                             <tr key={pos.rank}>
                                 <td>
                                     <div className='ClubRank'>{pos.rank}</div>
@@ -54,6 +58,7 @@ export function Positions() {
                         </tbody>
                     </table>
                 </div>
+                <Assists></Assists>
             </div>
         </>
     );

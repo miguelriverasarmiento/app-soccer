@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, memo } from 'react';
 
 const FormationAway = (props) => {
 
@@ -271,4 +271,4 @@ return(
     );
 }
 
-export default FormationAway;
+export default memo(FormationAway);
