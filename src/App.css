@@ -3,7 +3,7 @@
   overflow: hidden;
 }
 
-/*.............................Primera parte...........................*/
+/*.............................Primera parte / pagina equipos...........................*/
 
 .HeaderPage {
   height: 20%;
@@ -246,7 +246,7 @@
   margin-bottom: 2px;
 }
 
-/* ..........................Segunda parte......................... */
+/* ..........................Segunda parte / pagina posiciones......................... */
 
 .PageMenu {
   position: absolute;
@@ -396,7 +396,7 @@ td {
   font-size: 14px;
 }
 
-/* .............................Tercera parte........................... */
+/* .............................Tercera parte / pagina resultados........................... */
 
 .ContainerMatches {
   width: 100%;
