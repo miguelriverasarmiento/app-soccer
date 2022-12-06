@@ -32,7 +32,6 @@ export async function topScorers() {
                 throw new NetworkError()
             }
             const data = await response.json();
-            console.log(data);
             return data;
     } catch(err) {
         throw err;
@@ -53,7 +52,6 @@ export async function topAssists() {
                 throw new NetworkError()
             }
             const data = await response.json();
-            console.log(data);
             return data;
     } catch(err) {
         throw err;

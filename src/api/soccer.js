@@ -11,7 +11,6 @@ export async function getSoccerLeagues() {
                 throw new NetworkError()
             }
             const data = await response.json();
-            console.log(data);
             return data;
     } catch (err) {
         throw err;
@@ -73,6 +72,7 @@ export async function searchPlayerDetails(id = 882){
                 throw new NetworkError()
             }
             const data = await response.json();
+            console.log(data);
             return data;
     } catch (err) {
         throw err;
@@ -92,7 +92,7 @@ export async function searchTeamPlayerOne(id = 33){
                 throw new NetworkError()
             }
             const data = await response.json();
-            const player = data.response[0].players[0].id;
+            const player = data.response[0]?.players[0]?.id;
             return player;
     } catch (err) {
         throw err;

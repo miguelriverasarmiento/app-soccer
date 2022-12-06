@@ -1,27 +1,17 @@
-import { useEffect, useState } from 'react';
-import { positionsDb, topScorers, topAssists } from '../api/positionsDb';
+import { useEffect, useState, useMemo } from 'react';
+import { positionsDb } from '../api/positionsDb';
+import Scorers from './Scorers';
+import Assists from './Assists';
 
 export function Positions() {
 
     const [table, setTable] = useState([]);
-    const [topScorer, setTopScorer] = useState([]);
-    const [topAssist, setTopAssist] = useState([]);
 
+    const tableMemo = useMemo(() => table, [table]);
+    
     useEffect(() => {
         positionsDb()
             .then((data) => setTable(data))
-            .catch((err) => console.log("error", err));
-    }, []);
-
-    useEffect(() => {
-        topScorers()
-            .then((data) => setTopScorer(data.response))
-            .catch((err) => console.log("error", err));
-    }, []);
-
-    useEffect(() => {
-        topAssists()
-            .then((data) => setTopAssist(data.response))
             .catch((err) => console.log("error", err));
     }, []);
 
@@ -31,63 +21,7 @@ export function Positions() {
                 <div className="DivTitlePos">
                     <h1 className='TitlePositions'>Tabla de posiciones temporada 2022-23</h1>
                 </div>
-                <div className="DivScorers">
-                <h1 className='TitlePositions'>Goleadores</h1>
-                    <table className="TableScorers">
-                        <thead>
-                            <tr>
-                                <th>Jugador</th>
-                                <th>Goles</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>{topScorer[0]?.player?.name}</td>
-                                <td>{topScorer[0]?.statistics[0]?.goals?.total}</td>
-                            </tr>
-                            <tr>
-                                <td>{topScorer[1]?.player?.name}</td>
-                                <td>{topScorer[1]?.statistics[0]?.goals?.total}</td>
-                            </tr>
-                            <tr>
-                                <td>{topScorer[2]?.player?.name}</td>
-                                <td>{topScorer[2]?.statistics[0]?.goals?.total}</td>
-                            </tr>
-                            <tr>
-                                <td>{topScorer[3]?.player?.name}</td>
-                                <td>{topScorer[3]?.statistics[0]?.goals?.total}</td>
-                            </tr>
-                            <tr>
-                                <td>{topScorer[4]?.player?.name}</td>
-                                <td>{topScorer[4]?.statistics[0]?.goals?.total}</td>
-                            </tr>
-                            <tr>
-                                <td>{topScorer[5]?.player?.name}</td>
-                                <td>{topScorer[5]?.statistics[0]?.goals?.total}</td>
-                            </tr>
-                            <tr>
-                                <td>{topScorer[6]?.player?.name}</td>
-                                <td>{topScorer[6]?.statistics[0]?.goals?.total}</td>
-                            </tr>
-                            <tr>
-                                <td>{topScorer[7]?.player?.name}</td>
-                                <td>{topScorer[7]?.statistics[0]?.goals?.total}</td>
-                            </tr>
-                            <tr>
-                                <td>{topScorer[8]?.player?.name}</td>
-                                <td>{topScorer[8]?.statistics[0]?.goals?.total}</td>
-                            </tr>
-                            <tr>
-                                <td>{topScorer[9]?.player?.name}</td>
-                                <td>{topScorer[9]?.statistics[0]?.goals?.total}</td>
-                            </tr>
-                            <tr>
-                                <td>{topScorer[10]?.player?.name}</td>
-                                <td>{topScorer[10]?.statistics[0]?.goals?.total}</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <Scorers></Scorers>
                 <div className='DivTable'>
                     <table>
                         <thead>
@@ -104,7 +38,7 @@ export function Positions() {
                             </tr>
                         </thead>
                         <tbody>
-                            {table.map((pos) => (
+                            {tableMemo.map((pos) => (
                             <tr key={pos.rank}>
                                 <td>
                                     <div className='ClubRank'>{pos.rank}</div>
@@ -124,63 +58,7 @@ export function Positions() {
                         </tbody>
                     </table>
                 </div>
-                <div className="DivAssists">
-                <h1 className='TitlePositions'>Asistidores</h1>
-                    <table className="TableAssists">
-                        <thead>
-                            <tr>
-                                <th>Jugador</th>
-                                <th>Asistencias</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>{topAssist[0]?.player?.name}</td>
-                                <td>{topAssist[0]?.statistics[0]?.goals?.assists}</td>
-                            </tr>
-                            <tr>
-                                <td>{topAssist[1]?.player?.name}</td>
-                                <td>{topAssist[1]?.statistics[0]?.goals?.assists}</td>
-                            </tr>
-                            <tr>
-                                <td>{topAssist[2]?.player?.name}</td>
-                                <td>{topAssist[2]?.statistics[0]?.goals?.assists}</td>
-                            </tr>
-                            <tr>
-                                <td>{topAssist[3]?.player?.name}</td>
-                                <td>{topAssist[3]?.statistics[0]?.goals?.assists}</td>
-                            </tr>
-                            <tr>
-                                <td>{topAssist[4]?.player?.name}</td>
-                                <td>{topAssist[4]?.statistics[0]?.goals?.assists}</td>
-                            </tr>
-                            <tr>
-                                <td>{topAssist[5]?.player?.name}</td>
-                                <td>{topAssist[5]?.statistics[0]?.goals?.assists}</td>
-                            </tr>
-                            <tr>
-                                <td>{topAssist[6]?.player?.name}</td>
-                                <td>{topAssist[6]?.statistics[0]?.goals?.assists}</td>
-                            </tr>
-                            <tr>
-                                <td>{topAssist[7]?.player?.name}</td>
-                                <td>{topAssist[7]?.statistics[0]?.goals?.assists}</td>
-                            </tr>
-                            <tr>
-                                <td>{topAssist[8]?.player?.name}</td>
-                                <td>{topAssist[8]?.statistics[0]?.goals?.assists}</td>
-                            </tr>
-                            <tr>
-                                <td>{topAssist[9]?.player?.name}</td>
-                                <td>{topAssist[9]?.statistics[0]?.goals?.assists}</td>
-                            </tr>
-                            <tr>
-                                <td>{topAssist[10]?.player?.name}</td>
-                                <td>{topAssist[10]?.statistics[0]?.goals?.assists}</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <Assists></Assists>
             </div>
         </>
     );
