@@ -1,3 +1,6 @@
+import _handleError from './myErrorHandler';
+import _throwSpecificError from './myErrorHandler';
+
 export async function positionsDb() {
     try {
         const response = await fetch("https://v3.football.api-sports.io/standings?league=39&season=2022", {
@@ -8,15 +11,14 @@ export async function positionsDb() {
                 }
             });
             if(!response.ok) {
-                throw new NetworkError()
+                return _handleError(response.status);
             }
             const data = await response.json();
             const standings = data.response[0].league.standings[0];
             return standings;
     } catch(err) {
-        throw err;
+        _throwSpecificError(err);
     }
-
 }
 
 export async function topScorers() {
@@ -29,14 +31,13 @@ export async function topScorers() {
                 }
             });
             if(!response.ok) {
-                throw new NetworkError()
+                return _handleError(response.status);
             }
             const data = await response.json();
             return data;
     } catch(err) {
-        throw err;
+        _throwSpecificError(err);
     }
-
 }
 
 export async function topAssists() {
@@ -49,18 +50,11 @@ export async function topAssists() {
                 }
             });
             if(!response.ok) {
-                throw new NetworkError()
+                return _handleError(response.status);
             }
             const data = await response.json();
             return data;
     } catch(err) {
-        throw err;
-    }
-
-}
-
-class NetworkError extends Error {
-    constructor(){
-        super('Network Error');
+        _throwSpecificError(err);
     }
 }
