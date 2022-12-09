@@ -1,6 +1,3 @@
-import _handleError from './myErrorHandler';
-import _throwSpecificError from './myErrorHandler';
-
 export async function getSoccerLeagues() {
     try {
         const response = await fetch('https://v3.football.api-sports.io/teams?league=39&season=2022', {
@@ -11,12 +8,12 @@ export async function getSoccerLeagues() {
                 }
             });
             if(!response.ok){
-                return _handleError(response.status);
+                throw new NetworkError()
             }
             const data = await response.json();
             return data;
     } catch (err) {
-        _throwSpecificError(err);
+        throw err;
     }
 }
 
@@ -30,7 +27,7 @@ export async function searchTeamPlayers(id = 33){
                 }
             });
             if(!response.ok){
-                return _handleError(response.status);
+                throw new NetworkError()
             }
             const data = await response.json();
             const players = data.response[0]?.players;
@@ -39,7 +36,7 @@ export async function searchTeamPlayers(id = 33){
             }));
             return result;
     } catch (err) {
-        _throwSpecificError(err);
+        throw err;
     }
 } 
 
@@ -53,12 +50,12 @@ export async function searchTeamStadium(id = 33){
                 }
             });
             if(!response.ok){
-                return _handleError(response.status);
+                throw new NetworkError()
             }
             const data = await response.json();
             return data;
     } catch (err) {
-        _throwSpecificError(err);
+        throw err;
     }
 }
 
@@ -72,13 +69,13 @@ export async function searchPlayerDetails(id = 882){
                 }
             });
             if(!response.ok){
-                return _handleError(response.status);
+                throw new NetworkError()
             }
             const data = await response.json();
             console.log(data);
             return data;
     } catch (err) {
-        _throwSpecificError(err);
+        throw err;
     }
 }
 
@@ -92,13 +89,13 @@ export async function searchTeamPlayerOne(id = 33){
                 }
             });
             if(!response.ok){
-                return _handleError(response.status);
+                throw new NetworkError()
             }
             const data = await response.json();
             const player = data.response[0]?.players[0]?.id;
             return player;
     } catch (err) {
-        _throwSpecificError(err);
+        throw err;
     }
 }
 
@@ -112,11 +109,17 @@ export async function searchTeamPlayersNumbers(id = 33){
                 }
             });
             if(!response.ok){
-                return _handleError(response.status);
+                throw new NetworkError()
             }
             const data = await response.json();
             return data;
     } catch (err) {
-        _throwSpecificError(err);
+        throw err;
     }
 } 
+
+class NetworkError extends Error {
+    constructor(){
+        super('Network Error');
+    }
+}
