@@ -22,7 +22,7 @@ const PlayerDetails = ({idPlay, handleError}) => {
     return (
         <>
         <div className='DivDetailsPlayer'>
-            <div><img src={playerDetails[0]?.player?.photo} /></div>
+            <div className='DivPhotoPlayer'><img src={playerDetails[0]?.player?.photo} /></div>
             <ul className='FeaturesPlayerUl'>
                 <li className='PlayersTeamLi'><b>Nombre:</b> {playerDetails[0]?.player?.firstname}</li>
                 <li className='PlayersTeamLi'><b>Apellido:</b> {playerDetails[0]?.player?.lastname}</li>
@@ -43,7 +43,6 @@ const PlayerDetails = ({idPlay, handleError}) => {
                     <li className='PlayersTeamLi'><b>Precision de pases:</b> {playerDetails[0]?.statistics[0]?.passes?.accuracy}%</li>
                     <li className='PlayersTeamLi'><b>Goles recibidos:</b> {playerDetails[0]?.statistics[0]?.goals?.conceded}</li>
                     <li className='PlayersTeamLi'><b>Remates atajados:</b> {playerDetails[0]?.statistics[0]?.goals?.saves}</li>
-                    <li className='PlayersTeamLi'><b>Entradas bloqueadas:</b> {playerDetails[0]?.statistics[0]?.tackles?.blocks === null ? "0" : playerDetails[0]?.statistics[0]?.tackles?.blocks}</li>
                     <li className='PlayersTeamLi'><b>Duelos ganados:</b> {playerDetails[0]?.statistics[0]?.duels?.won}</li>
                     <li className='PlayersTeamLi'><b>Faltas cometidas:</b> {playerDetails[0]?.statistics[0]?.fouls?.committed === null ? "0" : playerDetails[0]?.statistics[0]?.fouls?.committed}</li>
                     <li className='PlayersTeamLi'><b>Penaltis comprometidos:</b> {playerDetails[0]?.statistics[0]?.penalty?.commited === null ? "0" : playerDetails[0]?.statistics[0]?.penalty?.commited}</li>

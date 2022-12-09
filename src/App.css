@@ -179,11 +179,11 @@
 }
 
 .DivButtonsPag {
-  position: absolute;
   height: 6%;
   width: 10%;
   top: 470px;
   left: 428px;
+  position: absolute;
 }
 
 .ButtonPlayersTeam {
@@ -204,17 +204,24 @@
 }
 
 .DivDetailsPlayer {
-  position: absolute;
   width: 21%;
   height: 75%;
   top: 124px;
   left: 608px;
+  position: absolute;
   box-shadow: -1px -1px 5px 1px black;
+}
+
+.DivPhotoPlayer {
+  width: 150px;
+  height: 150px;
+  margin-top: 18px;
+  margin-left: 39px;
 }
 
 .FeaturesPlayerUl {
   width: 90%;
-  margin-top: 13px;
+  margin-top: 33px;
   margin-left: -26px;
   margin-bottom: 52px;
   font-size: small;
@@ -223,17 +230,17 @@
 }
 
 .DivDetailsPlayerTwo {
-  position: absolute;
   width: 21%;
   height: 75%;
   top: 124px;
   left: 849px;
+  position: absolute;
   box-shadow: -1px -1px 5px 1px black;
 }
 
 .FeaturesPlayerUlTwo {
   width: 92%;
-  margin-top: 2px;
+  margin-top: 15px;
   margin-left: -26px;
   margin-bottom: 26px;
   font-size: small;
@@ -249,11 +256,11 @@
 /* ..........................Segunda parte......................... */
 
 .PageMenu {
-  position: absolute;
   width: 243px;
   height: 18px;
   margin-top: 49px;
   margin-left: 1018px;
+  position: absolute;
 }
 
 .LayoutsLink {

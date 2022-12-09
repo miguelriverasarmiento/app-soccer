@@ -1,3 +1,5 @@
+import {_handleError, _throwSpecificError} from './myErrorHandler';
+
 export async function matchesFixtures() {
     try {
         const response = await fetch("https://v3.football.api-sports.io/fixtures?season=2022&league=39", {
@@ -8,12 +10,12 @@ export async function matchesFixtures() {
                 }
             });
             if(!response.ok) {
-                throw new NetworkError()
+                return _handleError(response.status);
             }
             const data = await response.json();
             return data;
     } catch(err) {
-        throw err;
+        _throwSpecificError(err);
     }
 
 }
@@ -28,12 +30,12 @@ export async function lastTenGames() {
                 }
             });
             if(!response.ok) {
-                throw new NetworkError()
+                return _handleError(response.status);
             }
             const data = await response.json();
             return data;
     } catch(err) {
-        throw err;
+        _throwSpecificError(err);
     }
 }
 
@@ -47,14 +49,12 @@ export async function lineupsMatches(idFixture) {
                 }
             });
             if(!response.ok) {
-                throw new NetworkError()
+                return _handleError(response.status);
             }
             const data = await response.json();
             return data;
-            
-            
     } catch(err) {
-        throw err;
+        _throwSpecificError(err);
     }
 }
 
@@ -68,14 +68,12 @@ export async function eventsMatches(idFixture) {
                 }
             });
             if(!response.ok) {
-                throw new NetworkError()
+                return _handleError(response.status);
             }
             const data = await response.json();
             return data;
-            
-            
     } catch(err) {
-        throw err;
+        _throwSpecificError(err);
     }
 }
 
@@ -89,18 +87,11 @@ export async function matchesScore(idFixt) {
                 }
             });
             if(!response.ok) {
-                throw new NetworkError()
+                return _handleError(response.status);
             }
             const data = await response.json();
             return data;
     } catch(err) {
-        throw err;
-    }
-
-}
-
-class NetworkError extends Error {
-    constructor(){
-        super('Network Error');
+        _throwSpecificError(err);
     }
 }
