@@ -11,12 +11,11 @@ export function _handleError(status) {
 }
 
 export function _throwSpecificError(err) {
-    if(err instanceof ServerError || err instanceof NotFoundError || err instanceof RateLimit) {
+    if (err instanceof ServerError || err instanceof NotFoundError || err instanceof RateLimit) {
         throw err;
     }
-    throw NetworkError();
+    throw new NetworkError();
 }
-
 
 class NetworkError extends Error {
     constructor(){
