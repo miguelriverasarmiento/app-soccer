@@ -22,7 +22,7 @@ const PlayerDetails = ({idPlay, handleError}) => {
     return (
         <>
         <div className='DivDetailsPlayer'>
-            <div className='DivPhotoPlayer'><img src={playerDetails[0]?.player?.photo} /></div>
+            <div className='DivPhotoPlayer'><img className='OnePhotoPlayer' src={playerDetails[0]?.player?.photo} /></div>
             <ul className='FeaturesPlayerUl'>
                 <li className='PlayersTeamLi'><b>Nombre:</b> {playerDetails[0]?.player?.firstname}</li>
                 <li className='PlayersTeamLi'><b>Apellido:</b> {playerDetails[0]?.player?.lastname}</li>
