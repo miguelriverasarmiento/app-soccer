@@ -23,9 +23,9 @@ export function Positions() {
                 </div>
                 <Scorers></Scorers>
                 <div className='DivTable'>
-                    <table>
+                    <table className='TabForResponsive'>
                         <thead>
-                            <tr>
+                            <tr className='TabTrForResponsive'>
                                 <th className="TheadThPos">Club</th>
                                 <th>PJ</th>
                                 <th>G</th>

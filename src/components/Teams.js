@@ -36,11 +36,9 @@ export function Teams() {
     <div className='App'>
       {errorState.hasError && <div>{errorState.message}</div>}
       <TeamsList handleDetailsTeam={handleDetailsTeam} handleError={handleError}></TeamsList>
-      <div className='InfoTeam'>
-        <TeamInfo idTeam={idTeam} handleError={handleError}></TeamInfo>
-        <Players handlePlayer={handlePlayer} idTeam={idTeam} handleError={handleError}></Players>
-        <PlayerDetails idPlay={idPlay} handleError={handleError}></PlayerDetails>
-      </div>
+      <TeamInfo idTeam={idTeam} handleError={handleError}></TeamInfo>
+      <Players handlePlayer={handlePlayer} idTeam={idTeam} handleError={handleError}></Players>
+      <PlayerDetails idPlay={idPlay} handleError={handleError}></PlayerDetails>
     </div>
   );
 }
