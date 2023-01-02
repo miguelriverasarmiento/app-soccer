@@ -65,7 +65,7 @@ export function Matches() {
     return(
         <div className="ContainerMatches">
             <div className="DivTitleMatchesCom">
-                <h1 className="TitleMatches">Calendario de partidos temporada 2022-23</h1>
+                <h1 className="TitleMatches">Temporada 2022-23</h1>
             </div>
             {openList.isToggleOn ? (
                 <AllCalendarMatches convertDate={convertDate} statusMatchLong={statusMatchLong}></AllCalendarMatches>
