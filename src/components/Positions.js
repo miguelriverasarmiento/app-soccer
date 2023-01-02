@@ -19,7 +19,7 @@ export function Positions() {
         <>
             <div className="BodyPos">
                 <div className="DivTitlePos">
-                    <h1 className='TitlePositions'>Tabla de posiciones temporada 2022-23</h1>
+                    <h1 className='TitlePositions'>Posiciones temporada 2022-23</h1>
                 </div>
                 <Scorers></Scorers>
                 <div className='DivTable'>

@@ -3,6 +3,20 @@
   overflow: hidden;
 }
 
+body::-webkit-scrollbar {
+  width: 7px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #244242;
+  border-radius: 5px;
+}
+.FooterUnique {
+  position: absolute;
+  margin-left: 11px;
+  bottom: 0px;
+  font-size: 12px;
+}
+
 /*.............................Primera parte...........................*/
 .HeaderPage {
   width: 100%;
@@ -53,6 +67,7 @@ a:hover {
   height: auto;
   background-color: #849595;
   box-shadow: 0px 1px 3px 0px black;
+  border: solid 1px #525149;
   float: left;
 }
 
@@ -65,7 +80,7 @@ a:hover {
 }
 
 .TeamsUl {
-  width: 207px;
+  width: 230px;
   height: 463px;
   margin-top: -8px;
   margin-left: -5px;
@@ -126,7 +141,7 @@ a:hover {
 }
 
 .DivDetailsTeam {
-  width: 28%;
+  width: 27.7%;
   height: auto;
   margin-top: 3em;
   margin-left: 17.2em;
@@ -148,24 +163,24 @@ a:hover {
 }
 
 .DivStadiumLogo {
-  width: 28.3%;
+  width: 28%;
   height: 17.2em;
   margin-top: -11px;
-  margin-left: 17em;
+  margin-left: 17.2em;
   box-shadow: -1px -1px 5px 1px black;
 }
 
 .StadiumLogo {
   width: 99%;
-  height: 100%;
-  margin-left: 2px;
+  height: auto;
+  margin-left: 1px;
 }
 /*------- Jugadores ----------*/
 
 .DivPlayersTeam {
   width: 17%;
   height: 25.1em;
-  margin-top: -25.1em;
+  margin-top: -25.2em;
   margin-left: 41em;
   box-shadow: -1px -1px 5px 1px black;
 }
@@ -237,7 +252,7 @@ a:hover {
 }
 
 .FeaturesPlayerUl {
-  width: 90%;
+  width: 108%;
   margin-top: 45px;
   margin-left: -26px;
   margin-bottom: 52px;
@@ -255,7 +270,7 @@ a:hover {
 }
 
 .FeaturesPlayerUlTwo {
-  width: 92%;
+  width: 98%;
   font-size: 16px;
   padding-top: 5px;
   padding-left: 14px;
@@ -385,7 +400,7 @@ td {
   width: 286px;
   height: 480px;
   margin-top: 102px;
-  margin-left: 1060px;
+  margin-left: 1065px;
   position: absolute;
 }
 
@@ -421,12 +436,12 @@ td {
 }
 
 .DivTableMatches {
+  width: 51%;
   margin-top: 108px;
   margin-left: 333px;
   margin-right: 324px;
   position: inherit;
   float: left;
-  border: 1px solid black;
 }
 
 .TableMatches {
@@ -843,7 +858,7 @@ td {
   height: 30px;
 }
 
-/*--------------------Responsive desing---------------*/
+/*------------------------------------------Responsive desing-------------------------------------*/
 
 /* large devices (desktops, 992px and up) */
 
@@ -851,7 +866,11 @@ td {
   body {
     font-size: 12px;
   }
-  /*--------- Page Equipos ------------ */
+  .FooterUnique {
+    bottom: 0px;
+    position: absolute;
+}
+  /*---------------- Page Equipos ---------------- */
   .PageMenu {             
     top: 5.6em;
   }
@@ -897,7 +916,7 @@ td {
     padding-top: 53px;
   }
   .DivDetailsTeam {
-    width: 31%;
+    width: 31.3%;
     height: auto;
     margin-top: 3em;
     margin-left: 13.4em;
@@ -910,7 +929,7 @@ td {
     line-height: 1.3;
   }
   .DivStadiumLogo {
-    width: 31.2%;
+    width: 31.3%;
     height: 24.4em;
     margin-left: 16.7em;
   }
@@ -975,11 +994,14 @@ td {
     font-size: 14px;
     line-height: normal;
     display: grid;
-    grid-template-columns: 187px 147px 141px;
+    grid-template-columns: 187px 145px 141px;
   }
 
   /*--------- Page Posiciones ------------ */
 
+  .BodyPos {
+    height: 112em;
+  }
   .DivTitlePos {
     width: 42%;
     height: 35px;
@@ -1017,12 +1039,18 @@ td {
   }
 
 /*--------- Page Resultados ------------ */
+  .ContainerMatches {
+    height: 53em;
+    bottom: 2em;
+    max-height: 100vh;
+  }
 
   .DivTitleMatchesCom {
     width: 450px;
     margin-left: 148px;
   }
   .DivTableMatches {
+    width: 71%;
     margin-left: 141px;
     margin-right: 142px;
   }
@@ -1031,6 +1059,9 @@ td {
   }
 
 /* ------------ Lineups ------------- */
+  .ContainerLineups {
+    height: 90em;
+  }
   .DivTitleLineups {
     margin-left: 385px;
   }
@@ -1133,9 +1164,8 @@ td {
     overflow: visible;
   }
   .List {
-    width: 40%;
+    width: 39%;
     height: 41em;
-    margin-top: 1px;
     box-shadow: 1px 0px 4px 0px black;
   }
   .TitleTeamsList {
@@ -1143,7 +1173,7 @@ td {
     font-size: 17px;
   }
   .TeamsUl {
-    width: 38%;
+    width: 36%;
     margin-left: -32px;
     display: grid;
     position: absolute;
@@ -1180,7 +1210,7 @@ td {
     padding-top: 2.2em;
   }
   .DivDetailsTeam {
-    width: 60%;
+    width: 61%;
     height: 7.5em;
     margin-top: 8px;
     margin-left: 11.7em;
@@ -1198,7 +1228,7 @@ td {
     margin-bottom: 3px;
   }
   .DivStadiumLogo {
-    width: 60%;
+    width: 61%;
     height: 23.6em;
     margin-top: 2px;
     margin-left: 14.5em;
@@ -1213,7 +1243,7 @@ td {
     width: 50%;
     height: 29em;
     margin-top: 1.7em;
-    margin-left: 0em;
+    margin-left: 1px;
     box-shadow: 1px 0px 4px 0px black;
   }
   .TitleDivPlayers {
@@ -1226,7 +1256,7 @@ td {
   .PlayersTeamUl {
     width: 90%;
     margin-top: 25px;
-    padding-left: 18px;
+    padding-left: 17px;
     font-size: 13px;
     line-height: normal;
   }
@@ -1236,7 +1266,7 @@ td {
   .DivButtonsPag {
     width: 26%;
     margin-top: -3em;
-    margin-left: 4.7em;
+    margin-left: 5.3em;
   }
   .ButtonPlayersTeam {
     font-size: 12px;
@@ -1248,7 +1278,7 @@ td {
     width: 49%;
     height: 28.9em;
     margin-top: -31.3em;
-    margin-left: 18.4em;
+    margin-left: 18.8em;
     box-shadow: -1px -1px 5px 1px black;
   }
   .DivPhotoPlayer {
@@ -1277,11 +1307,11 @@ td {
     width: 100%;
     height: 60%;
     margin-top: -6px;
-    margin-left: 2px;
+    margin-left: 1px;
   }
   .FeaturesPlayerUlTwo {
     width: 92%;
-    margin-left: 0px;
+    margin-left: 3px;
     padding-top: 16px;
     padding-bottom: 13px;
     font-size: 13px;
@@ -1297,7 +1327,7 @@ td {
 /*----------------------- Page Posiciones ---------------------*/
 .BodyPos {
     width: 100%;
-    height: auto;
+    height: 108em;
 }
 .DivTitlePos {
   width: 77%;
@@ -1345,13 +1375,13 @@ td {
   font-size: 13px;
 }
 .DivScorers {
-  width: 50%;
+  width: 48%;
   height: auto;
   margin-top: 73em;
   margin-left: 1px;
 }
 .TableScorers {
-  width: 19.8em;
+  width: 19.4em;
   height: 339px;
   margin-top: 10px;
   font-size: 11px;
@@ -1360,10 +1390,10 @@ td {
   width: 50%;
   height: auto;
   margin-top: 73em;
-  margin-left: 18.5em;
+  margin-left: 18.2em;
 }
 .TableAssists {
-  width: 19.5em;
+  width: 19.9em;
   height: 339px;
   margin-top: 10px;
   font-size: 11px;
@@ -1409,6 +1439,9 @@ td {
   top: 20px;
 }
 /* ------------ Lineups component --------------- */
+.ContainerLineups {
+  height: 150em;
+}
 .DivTitleLineups {
   width: 39%;
   margin-top: 46px;
@@ -1524,4 +1557,453 @@ td {
     height: auto;
     font-size: 11px;
   }
+}
+/* ------------------------------------ max-width: 234px -------------------------*/
+@media (max-width: 234px) {
+  body {
+    font-size: 11px;
+  }
+  .HeaderPage {
+    width: 100%;
+    height: 7.2em;
+  }
+  .TitlePage {
+    margin-top: -13px;
+    font-size: 19px;
+}
+  .LogoPremier {
+    width: 22%;
+    height: auto;
+  }
+  .PageMenu {
+    width: 100%;
+    height: 22%;
+    margin-top: 1px;
+    padding-top: 7px;
+  }
+  .LayoutsLink {
+    height: 30%;
+    margin-left: 21px;
+    margin-right: 1px;
+    padding: 0px;
+  }
+  .List {
+    width: 100%;
+    height: 44em;
+    margin-top: 8px;
+  }
+  .TitleTeamsList {
+    margin-left: 77px;
+    font-size: 16px;
+  }
+  .TeamsUl {
+    width: 96%;
+    margin-left: -32px;
+  }
+  .LeagueTeamName {
+    margin-left: 4px;
+  }
+  .DivTeamLogo {
+    width: 19%;
+    height: auto;
+    margin-left: 2px;
+  }
+  .TeamLogo {
+    margin-top: 14px;
+    margin-left: 10px;
+  }
+  .DivTitleTeam {
+    width: 74%;
+    height: 7em;
+    margin-top: -7.1em;
+    margin-left: 4.7em;
+  }
+  .TitleTeam {
+    font-size: 16px;
+    margin-left: 6px;
+    padding-top: 2.2em;
+  }
+  .DivDetailsTeam {
+    width: 99%;
+    height: 7.5em;
+    margin-top: 8px;
+    margin-left: 2px;
+  }
+  .FeaturesTeamUl {
+    width: 12.5em;
+    margin-left: 10px;
+    font-size: 13px;
+    padding-top: -5px;
+  }
+  .DivStadiumLogo {
+    width: 99%;
+    height: auto;
+    margin-top: 2px;
+    margin-left: 2px;
+  }
+  .StadiumLogo {
+    width: 99%;
+    height: auto;
+    margin-left: 0px;
+ }
+  .DivPlayersTeam {
+    width: 99%;
+    height: 32em;
+    margin-top: 1.9em;
+    margin-left: 2px;
+  }
+
+  .PlayersTeamUl {
+    width: 90%;
+    margin-top: 25px;
+    padding-left: 10px;
+  }
+  .DivButtonsPag {
+    width: 45%;
+    margin-top: -3em;
+    margin-left: 5.9em;
+  }
+  .ButtonPlayersTeam {
+    font-size: 11px;
+  }
+  .PagePlayersTeam {
+    font-size: 12px;
+  }
+  .DivDetailsPlayer {
+    width: 99%;
+    height: 30em;
+    margin-top: -2.5em;
+    margin-left: 2px;
+  }
+  .DivPhotoPlayer {
+    width: 70%;
+    height: auto;
+    margin-top: 18px;
+    margin-left: 50px;
+  }
+  .OnePhotoPlayer {
+    width: 74%;
+    height: 74%;
+    padding-top: 21px;
+  }
+  .FeaturesPlayerUl {
+    width: 90%;
+    margin-top: 27px;
+    margin-left: -28px;
+    font-size: 13px;
+    line-height: normal;
+    list-style-type: none;
+  }
+  .PlayersTeamLi {
+    margin-bottom: 8px;
+  }
+  .DivDetailsPlayerTwo {
+    width: 99%;
+    height: 32em;
+    margin-top: -6px;
+    margin-left: 2px;
+  }
+  .FeaturesPlayerUlTwo {
+    width: 92%;
+    margin-left: -3px;
+    padding-top: 20px;
+    grid-template-columns: none;
+  }
+  .PlayersFeaturesLi {
+    margin-bottom: 6px;
+  }
+
+/*----------------------- Page Posiciones ---------------------*/
+.BodyPos {
+    width: 100%;
+    height: 158em;
+    margin-top: 10px;
+}
+.DivTitlePos {
+  width: 95%;
+  margin-left: 1px;
+  margin-top: 45px;
+}
+.TitlePositions {
+  width: 97%;
+  font-size: 13px;
+  margin-top: 15px;
+  margin-left: 2px;
+}
+.DivTable {
+  width: 99%;
+  margin-top: -25px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.DivTable::-webkit-scrollbar {
+  width: 5px;
+}
+.DivTable::-webkit-scrollbar-thumb {
+  background: #244242;
+  border-radius: 5px;
+}
+.TabForResponsive {
+  width: 29em;
+}
+.ClubRank {
+  width: 30px;
+  padding-left: 1px;
+  padding-top: 9px;
+  font-size: 12px;
+}
+.ClubLogo {
+  width: 23px;
+  height: auto;
+  padding-top: 5px;
+}
+.TableTeamLogo {
+  width: 90%;
+  height: auto;
+}
+.ClubName {
+  width: 88%;
+  padding-left: 62px;
+  padding-top: 9px;
+  float: inherit;
+  font-size: 10px;
+}
+.ClubAllPoints {
+  width: 25px;
+  height: 12px;
+  font-size: 13px;
+}
+.DivScorers {
+  width: 99%;
+  margin-top: 82em;
+}
+.TableScorers {
+  width: 19.6em;
+}
+.DivAssists {
+  width: 99%;
+  margin-top: 119em;
+  margin-left: 1px;
+}
+.TableAssists {
+  width: 19.6em;
+}
+.FooterUnique {
+  padding-left: 12px;
+  text-align: left;
+  font-size: 12px;
+  margin-top: 144em;
+}
+
+/* ---------------- Page Resultados --------------------- */
+.ContainerMatches {
+  height: 104em;
+  margin-top: 4em;
+  bottom: 5em;
+  max-height: none;
+}
+.DivTitleMatchesCom {
+  width: 80%;
+  margin-top: 75px;
+  margin-left: 3px;
+}
+.TitleMatches {
+  width: 14em;
+  font-size: 12px;
+}
+.DivTableMatches {
+  width: 99%;
+  margin-top: 99px;
+  margin-left: 1px;
+}
+.TableMatches {
+  width: 100%;
+}
+.DivMatches {
+  width: 99%;
+}
+.DataMatch {
+  margin-left: 52px;
+}
+.DivRounds {
+  margin-left: 67px;
+  font-size: 11px;
+}
+.StatusLong {
+  font-size: 11px;
+}
+.TeamHome {
+    width: 42%;
+    margin-left: 0px;
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+}
+.DivHomeLogo {
+    width: 33%;
+    height: auto;
+    margin-left: 0px;
+}
+.TeamHomeLogo {
+    width: 99%;
+    height: auto;
+}
+.NameTeamHome {
+    width: 96px;
+    margin-top: 34px;
+    margin-left: 0px;
+    font-size: 8px;
+}
+.StatusMatch {
+  margin-left: 64px;
+}
+.StatusLong {
+    width: 90px;
+    height: auto;
+    margin-top: 11px;
+    margin-left: 2px;
+    font-size: 10px;
+}
+.StatusGoalsHome {
+    margin-top: 29px;
+    margin-left: 13px;
+}
+.StatusGoalsAway {
+    margin-top: 29px;
+    margin-left: 67px;
+}
+.TeamAway {
+    width: 42%;
+    margin-left: 128px;
+    display: flex;
+    justify-content: center;
+}
+.DivAwayLogo {
+  width: 33%;
+  height: auto;
+  margin-left: 0px;
+}
+.TeamAwayLogo {
+  width: 99%;
+  height: auto;
+}
+.NameTeamAway {
+    width: 96px;
+    margin-top: 34px;
+    margin-right: 0px;
+    font-size: 8px;
+}
+.DivButtonGames {
+  left: 87px;
+}
+.GamesButton {
+  font-size: 13px;
+  border: 0px solid black;
+}
+/* ------------ Lineups component --------------- */
+.ContainerLineups {
+  height: 160em;
+}
+.DivTitleLineups {
+  width: 64%;
+  margin-top: 46px;
+  margin-left: 39px;
+}
+.TitleLineups {
+  font-size: 12px;
+}
+.DivNameTeamHome {
+  justify-content: center;
+}
+.TeamLogoLineups {
+  width: 33%;
+  height: auto;
+}
+.ClubNameLineupsHome {
+  font-size: 11px;
+}
+.ClubCoachLineupsHome {
+  width: 150%;
+  margin-top: -4px;
+  margin-left: 3px;
+  font-size: 11px;
+}
+.DivLineupsHome {
+  height: auto;
+  margin-left: 1px;
+}
+.Formation {
+  font-size: 13px;
+}
+.DivgridHome {
+  height: 19em;
+}
+.Player {
+  font-size: 10px;
+}
+.DivNameTeamAway {
+  margin-left: 10.5em;
+  justify-content: center;
+}
+.ClubNameLineupsAway {
+  font-size: 11px;
+}
+.ClubCoachLineupsAway {
+  width: 150%;
+  margin-top: 27.5em;
+  margin-left: -114px;
+  font-size: 11px;
+}
+.DivLineupsAway {
+  height: auto;
+  margin-left: 1px;
+  margin-top: 43em;
+}
+.DivgridAway {
+  height: 19em;
+}
+.DivMark {
+  width: 15%;
+  height: 14px;
+  margin-top: 10em;
+  margin-left: 7.4em;
+  font-size: 13px;
+}
+.DivSubtitutesHome {
+  width: 50%;
+  margin-top: 67em;
+  margin-left: 1px;
+  font-size: 11px;
+}
+.TitleSust {
+  width: 80px;
+}
+.NumberPlaySust {
+  width: 23px;
+}
+.NamePlaySust {
+  width: 87px;
+  margin-left: 26px;
+}
+.DivSubtitutesAway {
+  width: 50%;
+  margin-top: 67em;
+  margin-left: 10.3em;
+  font-size: 11px;
+  }
+.DivScoreMatch {
+  margin-top: 88em;
+}
+.EventsTable {
+  font-size: 10px;
+}
+th {
+  font-size: 11px;
+}
+.ThEventThree {
+  width: 32%;
+}
+.ThEventFour {
+  width: 10%;
+}
 }
