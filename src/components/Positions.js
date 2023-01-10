@@ -18,11 +18,9 @@ export function Positions() {
     return(
         <>
             <div className="BodyPos">
-                <div className="DivTitlePos">
-                    <h1 className='TitlePositions'>Posiciones temporada 2022-23</h1>
-                </div>
                 <Scorers></Scorers>
                 <div className='DivTable'>
+                    <h1 className='TitlePositions'>Posiciones temporada 2022-23</h1>
                     <table className='TabForResponsive'>
                         <thead>
                             <tr className='TabTrForResponsive'>

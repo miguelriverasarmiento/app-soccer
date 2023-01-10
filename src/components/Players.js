@@ -51,11 +51,11 @@ const Players = ({ handlePlayer, idTeam, handleError }) => {
                     {players}
                 </ul>
             </div>
-        </div>
-        <div className='DivButtonsPag'>
+            <div className='DivButtonsPag'>
             <button onClick={prevHandler} className='ButtonPlayersTeam'>Prev</button>
                 <b className='PagePlayersTeam'>{currentPage}</b>
             <button onClick={nextHandler} className='ButtonPlayersTeam'>Next</button>
+        </div>
         </div>
     </>
     );

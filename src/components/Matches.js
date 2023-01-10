@@ -66,7 +66,6 @@ export function Matches() {
         <div className="ContainerMatches">
             <div className="DivTitleMatchesCom">
                 <h1 className="TitleMatches">Temporada 2022-23</h1>
-            </div>
             {openList.isToggleOn ? (
                 <AllCalendarMatches convertDate={convertDate} statusMatchLong={statusMatchLong}></AllCalendarMatches>
             ) : 
@@ -76,6 +75,7 @@ export function Matches() {
                 <button onClick={() => toggleList()} className="GamesButton">
                     {openList.isToggleOn ? 'Ver menos' : 'Ver mas'}
                 </button>
+            </div>
             </div>
         </div>
     );

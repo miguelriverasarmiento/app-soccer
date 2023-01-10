@@ -5,21 +5,19 @@ import Footer from "./components/Footer";
 export function Layout() {
   return (
     <>
-      <main>
-        <nav>
-          <div className='HeaderPage'>
-            <h1 className='TitlePage'>Premier</h1><img src={logoPremier} className='LogoPremier'/><h1 className='TitlePage'>League</h1>
-            <div className='PageMenu'>
-              <Link to="/" className='LayoutsLink'>Equipos</Link>
-              <Link to="/positions" className='LayoutsLink'>Posiciones</Link>
-              <Link to="/matches" className='LayoutsLink'>Resultados</Link>
-            </div>
+      <nav>
+        <div className='HeaderPage'>
+          <h1 className='TitlePage'>Premier</h1><img src={logoPremier} className='LogoPremier'/><h1 className='TitlePage'>League</h1>
+          <div className='PageMenu'>
+            <Link to="/" className='LayoutsLink'>Equipos</Link>
+            <Link to="/positions" className='LayoutsLink'>Posiciones</Link>
+            <Link to="/matches" className='LayoutsLink'>Resultados</Link>
           </div>
-        </nav>
-        <section>
-          <Outlet />
-        </section>
-      </main>
+        </div>
+      </nav>
+      <section>
+        <Outlet />
+      </section>
       <Footer />
     </>
   );

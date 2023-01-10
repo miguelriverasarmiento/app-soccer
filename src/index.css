@@ -11,7 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  padding-bottom: 3em;
+  padding-bottom: 4em;
   min-height: 100vh;
   
 }

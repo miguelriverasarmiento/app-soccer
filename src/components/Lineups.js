@@ -32,18 +32,18 @@ export function Lineups() {
             <div className="DivNameTeamHome">
                 <div className='ClubLogoLineups'><img src={lineupsMemo[0]?.team?.logo} className='TeamLogoLineups'/></div>
                 <div className='ClubNameLineupsHome'>{lineupsMemo[0]?.team?.name}</div>
-                <div className='ClubCoachLineupsHome'>Entrenador: {lineupsMemo[0]?.coach?.name}</div>
             </div>
             <div className='DivLineupsHome'>
+                <div className='ClubCoachLineupsHome'>Entrenador: {lineupsMemo[0]?.coach?.name}</div>
                 <div className='Formation'>{lineupsMemo[0]?.formation}</div>
                 <FormationHome lineups={lineupsMemo}></FormationHome>
             </div>
             <div className="DivNameTeamAway">
                 <div className='ClubLogoLineups'><img src={lineupsMemo[1]?.team?.logo} className='TeamLogoLineups'/></div>
                 <div className='ClubNameLineupsAway'>{lineupsMemo[1]?.team?.name}</div>
-                <div className='ClubCoachLineupsAway'>Entrenador: {lineupsMemo[1]?.coach?.name}</div>
             </div>
             <div className='DivLineupsAway'>
+                <div className='ClubCoachLineupsAway'>Entrenador: {lineupsMemo[1]?.coach?.name}</div>
                 <div className='Formation'>{lineupsMemo[1]?.formation}</div>
                 <FormationAway lineups={lineupsMemo}></FormationAway>
             </div>
