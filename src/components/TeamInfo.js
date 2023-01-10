@@ -16,8 +16,6 @@ const TeamInfo = ({ idTeam, handleError }) => {
         <>
             <div className='DivTeamLogo'>
                 <img src={teamStadium[0]?.team?.logo} className='TeamLogo'/>
-            </div>
-            <div className='DivTitleTeam' >
                 <h3 className='TitleTeam'>{teamStadium[0]?.team?.name}</h3>
             </div>
             <div className='DivDetailsTeam'>
