@@ -807,7 +807,7 @@ td {
 }
 
 .NamePlaySust {
-  width: 118px;
+  width: 150px;
   height: 20px;
   margin-top: -20px;
   margin-left: 34px;
@@ -879,13 +879,15 @@ td {
   }
   /* ---------------------------Page alineaciones de equipos -----------------*/
   .DivTitleLineups {
-    width: 20%;
+    width: 100%;
     height: auto;
     margin: 0px auto;
     padding-top: 5em;
+    text-align: center;
   }
   .TitleLineups {
-    width: 105%;
+    width: 95%;
+    margin: 0px auto;
   }
   .DivMark {
     width: 11%;
@@ -980,22 +982,30 @@ td {
   .TitleMatches {
     font-size: 17px;
   }
+  .TeamHomeLogo {
+    width: 26%;
+  }
   .NameTeamHome {
     font-size: 13px;
   }
   .NameTeamAway {
     font-size: 13px;
   }
+  .TeamAwayLogo {
+    width: 26%;
+  }
 
   /* ---------------------------Page alineaciones de equipos -----------------*/
   .DivTitleLineups {
-    width: 20%;
+    width: 100%;
     height: auto;
     margin: 0px auto;
     padding-top: 5em;
+    text-align: center;
   }
   .TitleLineups {
-    width: 105%;
+    width: 98%;
+    margin: 0px auto;
     font-size: 17px;
   }
   .ClubCoachLineupsHome {
@@ -1040,8 +1050,8 @@ td {
   }
   .PageMenu {
     width: auto;
-    top: 4.7em;
-    font-size: 14px;
+    top: 5.2em;
+    font-size: 13px;
   }
   .TitleTeamsList {
     width: 40%;
@@ -1121,42 +1131,101 @@ td {
     grid-template-columns: 22% 56% 22%;
   }
   .TitlePositions {
-    margin-bottom: 5px;
-    padding-left: 4px;
-    font-size: 17px;
+    margin-bottom: -5px;
+    padding-left: 3px;
+    font-size: 14px;
+  }
+  .TableScorers {
+    font-size: 11px;
+  }
+  .ClubLogo {
+    width: 38px;
+  }
+  .ClubRank {
+    width: 17px;
+    margin-top: 12px;
+    padding-top: 0px;
+    font-size: 13px;
+  }
+  .ClubName {
+    width: 119px;
+    padding-top: 11px;
+    font-size: 11px;
+  }
+  .ClubAllPoints {
+    width: 26px;
+    font-size: 11px;
+  }
+  .TableAssists {
+    font-size: 11px;
   }
 
   /* ----------------------------Page Resultados ------------------------------*/
   .TitleMatches {
-    font-size: 17px;
+    font-size: 14px;
+  }
+  .TeamAway {
+    width: 40%;
+    height: 5em;
+    padding-top: 14px;
+  }
+  .TeamAwayLogo {
+    width: 26%;
+  }
+  .TeamHome {
+    width: 40%;
+    height: 5em;
+    padding-top: 14px;
+  }
+  .TeamHomeLogo {
+    width: 26%;
   }
   .NameTeamHome {
-    font-size: 13px;
+    font-size: 11px;
   }
   .NameTeamAway {
-    font-size: 13px;
+    font-size: 11px;
   }
 
   /* ---------------------------Page alineaciones de equipos -----------------*/
+
+  .ContainerLineups {
+    grid-template-rows: 7% 15% 25% 7% 43%;
+  }
   .DivTitleLineups {
-    width: 20%;
+    width: 100%;
     height: auto;
     margin: 0px auto;
     padding-top: 5em;
+    text-align: center;
   }
   .TitleLineups {
-    width: 105%;
-    font-size: 17px;
+    width: 24%;
+    margin: 0px auto;
+    font-size: 16px;
+  }
+  .ClubNameLineupsHome {
+    font-size: 15px;
   }
   .ClubCoachLineupsHome {
     font-size: 14px;
   }
+  .DivLineupsHome {
+    width: 90%;
+  }
+  .ClubNameLineupsAway {
+    font-size: 15px
+  }
   .ClubCoachLineupsAway {
     font-size: 14px;
   }
+  .DivLineupsAway {
+    width: 90%;
+  }
   .DivMark {
     width: 11%;
-    font-size: 40px;
+    height: 47px;
+    font-size: 38px;
   }
   .DivScoreMatch {
     width: 90%;
@@ -1165,12 +1234,576 @@ td {
     width: 100%;
     height: auto;
     margin: 0px auto;
+    font-size: 12px;
   }
   .DivSubtitutesHome {
-    width: 95%;
+    width: 105%;
+    font-size: 14px;
   }
   .DivSubtitutesAway {
+    width: 105%;
+    font-size: 14px;
+  }
+  .NamePlaySust {
+    width: 80%;
+  }
+}
+
+@media all and (min-width: 570px) and (max-width: 779px) { 
+
+  .App {
+    grid-template-areas:
+        'list shield shield'
+        'list detailsTeam detailsTeam'
+        'list stadiumPhoto stadiumPhoto'
+        'playersTeam detailsPlayer performancePlayer';
+    grid-template-rows: 12% 14% 35% 39%;
+    grid-template-columns: 33% 33% 34%;
+  }
+  .HeaderPage {
+    height: auto;
+  }
+  .PageMenu {
+    top: 6.2em;
+    font-size: 12px;
+  }
+  .TitlePage {
+    height: 26px;
+    padding: 3px;
+    padding-top: 0px;
+    font-size: 24px;
+  }
+  .LogoPremier {
+    width: 60px;
+    height: 60px;
+  }
+  .LayoutsLink {
+    margin-left: 0px;
+    border-radius: 7px;
+  }
+  .TitleTeamsList {
+    margin: 0px auto;
+    padding-top: 28px;
+    font-size: 17px;
+  }
+  .TeamsUl {
     width: 95%;
+    margin-left: -31px;
+    padding-top: 7px;
+    display: grid;
+  }
+  .TeamsLi {
+    font-size: 14px;
+  }
+  .DivTeamLogo {
+    width: 66%;
+    height: auto;
+  }
+  .TeamLogo {
+    width: auto;
+    height: 70px;
+    margin-top: 20px;
+  }
+  .TitleTeam {
+    margin-top: 45px;
+    margin-left: 10px;
+    font-size: 17px;
+  }
+  .FeaturesTeamUl {
+    margin-top: 9px;
+    margin-left: 5px;
+    font-size: 14px;
+  }
+  .TitleDivPlayers {
+    width: 50%;
+    font-size: 17px;
+  }
+  .PlayersTeamUl {
+    margin-top: -11px;
+    padding-left: 11px;
+    font-size: 14px;
+  }
+  .DivButtonsPag {
+    padding-top: 1px;
+    padding-bottom: 17px;
+  }
+  .PagePlayersTeam {
+    padding: 2px;
+    padding-top: 0px;
+  }
+  .ButtonPlayersTeam {
+    font-size: 13px;
+  }
+  .DivPhotoPlayer {
+    width: 65%;
+  }
+  .OnePhotoPlayer {
+    width: 99%;
+  }
+  .FeaturesPlayerUl {
+    width: 92%;
+    margin: 0px auto;
+    padding-top: 24px;
+    padding-left: 8px;
+    font-size: 14px;
+  }
+  .FeaturesPlayerUlTwo {
+    width: 100%;
+    padding-top: 1px;
+    padding-left: 10px;
+    display: grid;
+    font-size: 14px;
+  }
+  /* ---------------------------Page Posiciones ------------------------------*/
+  .BodyPos {
+    grid-template-areas: 'positions positions'
+                         'scorers assists';
+
+    grid-template-rows: 62% 38%;
+    grid-template-columns: 50% 50%;
+  }
+  .TitlePositions {
+    margin-bottom: -5px;
+    padding-left: 3px;
+    font-size: 14px;
+  }
+  .DivAssists {
+    width: 80%;
+  }
+  .TableScorers {
+    font-size: 11px;
+  }
+  .DivTable {
+    width: 90%;
+  }
+  .ClubLogo {
+    width: 38px;
+  }
+  .ClubRank {
+    width: 17px;
+    margin-top: 12px;
+    padding-top: 0px;
+    font-size: 13px;
+  }
+  .ClubName {
+    width: 119px;
+    padding-top: 11px;
+    font-size: 11px;
+  }
+  .ClubAllPoints {
+    width: 26px;
+    font-size: 11px;
+  }
+  .DivScorers {
+    width: 80%;
+  }
+  .TableAssists {
+    font-size: 11px;
+  }
+
+  /* ----------------------------Page Resultados ------------------------------*/
+  .TitleMatches {
+    width: 63%;
+    font-size: 14px;
+  }
+  .TableMatches {
+    width: 64%;
+  }
+  .TeamAway {
+    width: 40%;
+    height: 5em;
+    padding-top: 14px;
+  }
+  .TeamAwayLogo {
+    width: 26%;
+  }
+  .TeamHome {
+    width: 40%;
+    height: 5em;
+    padding-top: 14px;
+  }
+  .TeamHomeLogo {
+    width: 26%;
+  }
+  .NameTeamHome {
+    font-size: 10px;
+  }
+  .NameTeamAway {
+    font-size: 10px;
+  }
+  .DataMatch {
+    font-size: 13px;
+  }
+  .DivRounds {
+    font-size: 13px;
+  }
+  .StatusLong {
+    width: 63.4%;
+    font-size: 13px;
+  }
+  .StatusMatch {
+    width: 63%;
+  }
+  .StatusGoalsHome {
+    font-size: 17px;
+  }
+  .StatusGoalsAway {
+    font-size: 17px;
+  }
+  .StatusElapsed {
+    font-size: 20px;
+  }
+  /* ---------------------------Page alineaciones de equipos -----------------*/
+
+  .ContainerLineups {
+    grid-template-areas: 'title title title title'
+                         'shieldHome shieldHome shieldAway shieldAway'
+                         'formationHome formationHome formationAway formationAway'
+                         'substitutesHome markMatch markMatch substitutesAway'
+                         'eventsMatch eventsMatch eventsMatch eventsMatch';
+
+    grid-template-columns: 34% 16% 16% 34%;
+    grid-template-rows: 4% 14% 20% 14% 36%;
+  }
+  .DivTitleLineups {
+    width: 100%;
+    text-align: center;
+    padding-top: 5em;
+  }
+  .TitleLineups {
+    width: 29%;
+    margin: 0px auto;
+    font-size: 14px;
+  }
+  .ClubNameLineupsHome {
+    font-size: 14px;
+  }
+  .ClubCoachLineupsHome {
+    font-size: 13px;
+  }
+  .DivLineupsHome {
+    width: 95%;
+  }
+  .ClubNameLineupsAway {
+    font-size: 14px
+  }
+  .ClubCoachLineupsAway {
+    font-size: 13px;
+  }
+  .DivLineupsAway {
+    width: 95%;
+  }
+  .DivMark {
+    width: 41%;
+    height: 36px;
+    font-size: 32px;
+  }
+  .DivScoreMatch {
+    width: 90%;
+  }
+  .EventsTable {
+    width: 100%;
+    height: auto;
+    margin: 0px auto;
+    font-size: 12px;
+  }
+  .DivSubtitutesHome {
+    width: 100%;
+    font-size: 14px;
+  }
+  .DivSubtitutesAway {
+    width: 100%;
+    font-size: 14px;
+  }
+  .NamePlaySust {
+    width: 80%;
+  }
+}
+
+@media all and (min-width: 250px) and (max-width: 569px) { 
+
+  .App {
+    height: 138em;
+    grid-template-areas:
+        'list'
+        'shield'
+        'detailsTeam'
+        'stadiumPhoto'
+        'playersTeam'
+        'detailsPlayer'
+        'performancePlayer';
+    grid-template-rows: 27% 4.5% 5.9% 15% 15.5% 14.5% 20%;
+    grid-template-columns: 100%;
+    background-color: #849595;
+  }
+  .HeaderPage {
+    height: auto;
+  }
+  .PageMenu {
+    width: 100%;
+    top: 4.4em;
+    right: inherit;
+    display: flex;
+    text-align: center;
+    background-color: #102638;
+  }
+  .LayoutsLink {
+    width: 100%;
+    margin: 0px auto;
+    padding: 3px;
+    border-radius: 0px;
+    font-size: 12px;
+  }
+  .FooterUnique {
+    width: 99%;
+  }
+  .TitlePage {
+    height: 26px;
+    padding: 3px;
+    padding-top: 0px;
+    font-size: 24px;
+  }
+  .LogoPremier {
+    width: 60px;
+    height: 60px;
+  }
+  .TitleTeamsList {
+    width: 21%;
+    margin: 0px auto;
+    padding-top: 50px;
+    font-size: 14px;
+  }
+  .TeamsUl {
+    width: 88%;
+    margin-left: -17px;
+    padding-top: 4px;
+    display: grid;
+  }
+
+  .TeamsLi {
+    font-size: 13px;
+  }
+  .DivTeamLogo {
+    width: 100%;
+    height: auto;
+  }
+  .TeamLogo {
+    width: auto;
+    height: 70px;
+    margin-top: 14px;
+  }
+  .TitleTeam {
+    margin-top: 40px;
+    margin-left: 10px;
+    font-size: 16px;
+  }
+  .FeaturesTeamUl {
+    margin-top: 12px;
+    margin-left: 15px;
+    font-size: 13px;
+  }
+  .TitleDivPlayers {
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+  }
+  .PlayersTeamUl {
+    padding-top: 8px;
+    padding-left: 15px;
+    font-size: 13px;
+  }
+  .DivButtonsPag {
+    padding-top: 17px;
+    padding-bottom: 0px;
+  }
+  .PagePlayersTeam {
+    padding: 2px;
+    padding-top: 0px;
+  }
+  .ButtonPlayersTeam {
+    font-size: 12px;
+  }
+  .DivPhotoPlayer {
+    width: 95px;
+  }
+  .OnePhotoPlayer {
+    width: 99%;
+  }
+  .FeaturesPlayerUl {
+    width: 92%;
+    margin: 0px auto;
+    padding-top: 24px;
+    padding-left: 13px;
+    font-size: 13px;
+  }
+  .FeaturesPlayerUlTwo {
+    width: 100%;
+    padding-top: 1px;
+    padding-left: 16px;
+    display: grid;
+    font-size: 13px;
+  }
+  /* ---------------------------Page Posiciones ------------------------------*/
+  .BodyPos {
+    grid-template-areas: 'positions'
+                         'scorers'
+                         'assists';
+
+    grid-template-rows: 50% 25% 25%;
+    grid-template-columns: auto;
+  }
+  .TitlePositions {
+    margin-bottom: -5px;
+    padding-left: 3px;
+    font-size: 14px;
+  }
+  .DivAssists {
+    width: 80%;
+  }
+  .TableScorers {
+    font-size: 11px;
+  }
+  .DivTable {
+    width: 90%;
+  }
+  .ClubLogo {
+    width: 38px;
+  }
+  .ClubRank {
+    width: 17px;
+    margin-top: 12px;
+    padding-top: 0px;
+    font-size: 13px;
+  }
+  .ClubName {
+    width: 119px;
+    padding-top: 11px;
+    font-size: 11px;
+  }
+  .ClubAllPoints {
+    width: 26px;
+    font-size: 11px;
+  }
+  .DivScorers {
+    width: 80%;
+  }
+  .TableAssists {
+    font-size: 11px;
+  }
+
+  /* ----------------------------Page Resultados ------------------------------*/
+  .TitleMatches {
+    width: 63%;
+    font-size: 14px;
+  }
+  .TableMatches {
+    width: 64%;
+  }
+  .TeamAway {
+    width: 40%;
+    height: 5em;
+    padding-top: 14px;
+  }
+  .TeamAwayLogo {
+    width: 26%;
+  }
+  .TeamHome {
+    width: 40%;
+    height: 5em;
+    padding-top: 14px;
+  }
+  .TeamHomeLogo {
+    width: 26%;
+  }
+  .NameTeamHome {
+    font-size: 10px;
+  }
+  .NameTeamAway {
+    font-size: 10px;
+  }
+  .DataMatch {
+    font-size: 13px;
+  }
+  .DivRounds {
+    font-size: 13px;
+  }
+  .StatusLong {
+    width: 63.4%;
+    font-size: 13px;
+  }
+  .StatusMatch {
+    width: 63%;
+  }
+  .StatusGoalsHome {
+    font-size: 17px;
+  }
+  .StatusGoalsAway {
+    font-size: 17px;
+  }
+  .StatusElapsed {
+    font-size: 20px;
+  }
+  /* ---------------------------Page alineaciones de equipos -----------------*/
+
+  .ContainerLineups {
+    grid-template-areas: 'title title title title'
+                         'shieldHome shieldHome shieldAway shieldAway'
+                         'formationHome formationHome formationAway formationAway'
+                         'substitutesHome markMatch markMatch substitutesAway'
+                         'eventsMatch eventsMatch eventsMatch eventsMatch';
+
+    grid-template-columns: 34% 16% 16% 34%;
+    grid-template-rows: 4% 14% 20% 14% 36%;
+  }
+  .DivTitleLineups {
+    width: 100%;
+    text-align: center;
+    padding-top: 5em;
+  }
+  .TitleLineups {
+    width: 29%;
+    margin: 0px auto;
+    font-size: 14px;
+  }
+  .ClubNameLineupsHome {
+    font-size: 14px;
+  }
+  .ClubCoachLineupsHome {
+    font-size: 13px;
+  }
+  .DivLineupsHome {
+    width: 95%;
+  }
+  .ClubNameLineupsAway {
+    font-size: 14px
+  }
+  .ClubCoachLineupsAway {
+    font-size: 13px;
+  }
+  .DivLineupsAway {
+    width: 95%;
+  }
+  .DivMark {
+    width: 41%;
+    height: 36px;
+    font-size: 32px;
+  }
+  .DivScoreMatch {
+    width: 90%;
+  }
+  .EventsTable {
+    width: 100%;
+    height: auto;
+    margin: 0px auto;
+    font-size: 12px;
+  }
+  .DivSubtitutesHome {
+    width: 100%;
+    font-size: 14px;
+  }
+  .DivSubtitutesAway {
+    width: 100%;
+    font-size: 14px;
   }
   .NamePlaySust {
     width: 80%;
