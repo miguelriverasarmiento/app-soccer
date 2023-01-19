@@ -38,7 +38,7 @@ export function Positions() {
                         <tbody>
                             {tableMemo.map((pos) => (
                             <tr key={pos.rank}>
-                                <td>
+                                <td className='TdPositions'>
                                     <div className='ClubRank'>{pos.rank}</div>
                                     <div className='ClubLogo'><img src={pos.team?.logo} className='TableTeamLogo'/></div>
                                     <div className='ClubName'>{pos.team?.name}</div>
