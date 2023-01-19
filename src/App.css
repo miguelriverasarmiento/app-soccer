@@ -1475,6 +1475,9 @@ td {
     margin: 0px auto;
     font-size: 14px;
   }
+  .Player {
+    font-size: 12px;
+  }
   .ClubNameLineupsHome {
     font-size: 14px;
   }
@@ -1492,6 +1495,12 @@ td {
   }
   .DivLineupsAway {
     width: 95%;
+  }
+  .DivgridHome {
+    grid-gap: 0px;
+  }
+  .DivgridAway {
+    grid-gap: 0px;
   }
   .DivMark {
     width: 41%;
@@ -1649,13 +1658,61 @@ td {
                          'scorers'
                          'assists';
 
-    grid-template-rows: 50% 25% 25%;
+    grid-template-rows: 49.7% 20% 25%;
     grid-template-columns: auto;
   }
   .TitlePositions {
     margin-bottom: -5px;
     padding-left: 3px;
-    font-size: 14px;
+    font-size: 13px;
+  }
+  .DivTable {
+    width: 100%;
+    margin-top: 10px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  .DivTable::-webkit-scrollbar {
+    width: 5px;
+  }
+  .DivTable::-webkit-scrollbar-thumb {
+    background: #244242;
+    border-radius: 5px;
+  }
+  .TabForResponsive {
+    width: 100%;
+  }
+  .TheadThPos {
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 75px;
+  }
+  .ClubRank {
+    width: 30px;
+    padding-left: 1px;
+    padding-top: 9px;
+    font-size: 12px;
+  }
+  .ClubLogo {
+    width: 23px;
+    height: auto;
+    padding-top: 5px;
+  }
+  .TableTeamLogo {
+    width: 90%;
+    height: auto;
+  }
+  .ClubName {
+    width: 100%;
+    padding-left: 62px;
+    padding-top: 9px;
+    float: inherit;
+    font-size: 10px;
+  }
+  .ClubAllPoints {
+    width: 25px;
+    height: 12px;
+    font-size: 12px;
   }
   .DivAssists {
     width: 80%;
@@ -1663,29 +1720,9 @@ td {
   .TableScorers {
     font-size: 11px;
   }
-  .DivTable {
-    width: 90%;
-  }
-  .ClubLogo {
-    width: 38px;
-  }
-  .ClubRank {
-    width: 17px;
-    margin-top: 12px;
-    padding-top: 0px;
-    font-size: 13px;
-  }
-  .ClubName {
-    width: 119px;
-    padding-top: 11px;
-    font-size: 11px;
-  }
-  .ClubAllPoints {
-    width: 26px;
-    font-size: 11px;
-  }
   .DivScorers {
     width: 80%;
+    padding-top: 2em;
   }
   .TableAssists {
     font-size: 11px;
@@ -1693,14 +1730,14 @@ td {
 
   /* ----------------------------Page Resultados ------------------------------*/
   .TitleMatches {
-    width: 63%;
-    font-size: 14px;
+    width: 100%;
+    font-size: 13px;
   }
   .TableMatches {
-    width: 64%;
+    width: 100%;
   }
   .TeamAway {
-    width: 40%;
+    width: 43%;
     height: 5em;
     padding-top: 14px;
   }
@@ -1708,52 +1745,66 @@ td {
     width: 26%;
   }
   .TeamHome {
-    width: 40%;
+    width: 43%;
     height: 5em;
     padding-top: 14px;
   }
   .TeamHomeLogo {
-    width: 26%;
+    width: 47px;
+  }
+  .TeamAwayLogo {
+    width: 47px;
   }
   .NameTeamHome {
-    font-size: 10px;
+    font-size: 9px;
   }
   .NameTeamAway {
-    font-size: 10px;
+    font-size: 9px;
   }
   .DataMatch {
-    font-size: 13px;
+    width: 58%;
+    font-size: 12px;
   }
   .DivRounds {
-    font-size: 13px;
+    font-size: 12px;
   }
   .StatusLong {
-    width: 63.4%;
-    font-size: 13px;
+    width: 99%;
+    font-size: 12px;
   }
   .StatusMatch {
-    width: 63%;
+    width: 99%;
+  }
+  .DivGoalsMark {
+    padding-top: 14px;
   }
   .StatusGoalsHome {
-    font-size: 17px;
+    font-size: 15px;
   }
   .StatusGoalsAway {
-    font-size: 17px;
+    font-size: 15px;
   }
   .StatusElapsed {
-    font-size: 20px;
+    font-size: 16px;
+  }
+  .GamesButton {
+    font-size: 12px;
+    border-radius: 4px;
   }
   /* ---------------------------Page alineaciones de equipos -----------------*/
 
   .ContainerLineups {
-    grid-template-areas: 'title title title title'
-                         'shieldHome shieldHome shieldAway shieldAway'
-                         'formationHome formationHome formationAway formationAway'
-                         'substitutesHome markMatch markMatch substitutesAway'
-                         'eventsMatch eventsMatch eventsMatch eventsMatch';
+    grid-template-areas: 'title title'
+                         'shieldHome shieldAway'
+                         'formationHome formationHome'
+                         'formationAway formationAway'
+                         'markMatch markMatch'
+                         'substitutesHome substitutesAway'
+                         'eventsMatch eventsMatch';
 
-    grid-template-columns: 34% 16% 16% 34%;
-    grid-template-rows: 4% 14% 20% 14% 36%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 4% 11% 17% 17% 3% 12% 36%;
+    height: 126em;
   }
   .DivTitleLineups {
     width: 100%;
@@ -1761,52 +1812,89 @@ td {
     padding-top: 5em;
   }
   .TitleLineups {
-    width: 29%;
+    width: 100%;
     margin: 0px auto;
     font-size: 14px;
   }
+  .TeamLogoLineups {
+    width: 51px;
+    height: 51px;
+  }
+  .DivNameTeamHome {
+    width: 95%;
+  }
   .ClubNameLineupsHome {
-    font-size: 14px;
+    width: 100%;
+    font-size: 13px;
   }
   .ClubCoachLineupsHome {
-    font-size: 13px;
+    font-size: 12px;
   }
   .DivLineupsHome {
-    width: 95%;
+    width: 100%;
   }
   .ClubNameLineupsAway {
-    font-size: 14px
+    width: 100%;
+    font-size: 13px
   }
-  .ClubCoachLineupsAway {
-    font-size: 13px;
-  }
-  .DivLineupsAway {
+  .DivNameTeamAway {
     width: 95%;
   }
+  .ClubCoachLineupsAway {
+    font-size: 12px;
+  }
+  .DivLineupsAway {
+    width: 100%;
+  }
+  .DivgridHome {
+    grid-gap: 0px;
+  }
+  .DivgridAway {
+    grid-gap: 0px;
+  }
+  .Player {
+    font-size: 12px;
+  }
+  .Formation {
+    font-size: 13px;
+  }
   .DivMark {
-    width: 41%;
-    height: 36px;
-    font-size: 32px;
+    width: 45px;
+    height: 25px;
+    font-size: 21px;
   }
   .DivScoreMatch {
-    width: 90%;
+    width: 100%;
+    margin-top: 0em;
   }
   .EventsTable {
     width: 100%;
-    height: auto;
-    margin: 0px auto;
-    font-size: 12px;
+    font-size: 10px;
+  }
+  th {
+    font-size: 11px;
+  }
+  .ThEventThree {
+    width: 32%;
+  }
+  .ThEventFour {
+    width: 10%;
   }
   .DivSubtitutesHome {
-    width: 100%;
-    font-size: 14px;
+    width: 95%;
+    font-size: 12px;
   }
   .DivSubtitutesAway {
-    width: 100%;
-    font-size: 14px;
+    width: 95%;
+    font-size: 12px;
+  }
+  .NumberPlaySust {
+    width: 20px;
+    height: 20px;
   }
   .NamePlaySust {
-    width: 80%;
+    width: 81%;
+    margin-left: 22px;
   }
 }
 
