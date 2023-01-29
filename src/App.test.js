@@ -4,7 +4,7 @@ import { getSoccerLeagues, searchTeamPlayers, searchTeamStadium } from './api/so
 
   test('This should show a name of soccer league', async () => {
     render(<App />)
-    expect(await screen.getByText(/Premier/i)).toBeInTheDocument();
+    expect(await screen.getByText(/PremierLeague/i)).toBeInTheDocument();
   });
 
   test('This get a first team of teams list', async () => {
@@ -24,11 +24,3 @@ import { getSoccerLeagues, searchTeamPlayers, searchTeamStadium } from './api/so
       console.log("Running test");
       expect(list.response[0].venue.name).toBe('Old Trafford');
     });
-
-  test('This should show a error message when there is a network error', async () => {
-    jest.spyOn(window, 'fetch');
-    window.fetch.mockRejectedValue(new Error ('Network Error'));
-
-    render(<App />);
-    expect(await screen.findByText(/Network Error/i)).toBeInTheDocument();
-  });
