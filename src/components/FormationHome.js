@@ -28,6 +28,9 @@ const FormationHome = (props) => {
         if (item === "5-3-2") {
             formation532();
         }
+        if (item === "4-5-1") {
+            formation451();
+        }
             
         if (item === "4-2-3-1") {
             formation4231();
@@ -52,7 +55,6 @@ const FormationHome = (props) => {
         if (item === "3-2-4-1") {
             formation3241();
         }
-
     }
     function formation433() {
 
@@ -145,6 +147,27 @@ const FormationHome = (props) => {
         }
     }
 
+    function formation451() {
+
+        const span5 = document.querySelectorAll(".Player-one, .Player-two, .Player-three, .Player-four");
+
+        const span4 = document.querySelectorAll(".Player-five, .Player-six, .Player-seven, .Player-eight, .Player-nine");
+
+        const span20 = document.querySelectorAll(".Player-goalkeeper, .Player-ten");
+        
+        for (var i = 0, lin = span5.length; i < lin; i++) {
+            span5[i].style.setProperty("grid-row", "span 5");
+        }
+
+        for (var i = 0, lin = span4.length; i < lin; i++) {
+            span4[i].style.setProperty("grid-row", "span 4");
+        }
+
+        for (var i = 0, lin = span20.length; i < lin; i++) {
+            span20[i].style.setProperty("grid-row", "span 20");
+        }
+    }
+
     function formation4231() {
 
         const span3 = document.querySelectorAll(".Player-one, .Player-two, .Player-three, .Player-four");
@@ -168,6 +191,7 @@ const FormationHome = (props) => {
             span4[i].style.setProperty("grid-row", "span 4");
         }
     }
+
     function formation3421() {
 
         const span4 = document.querySelectorAll(".Player-one, .Player-two, .Player-three");
@@ -249,25 +273,25 @@ const FormationHome = (props) => {
         }
     }
     function formation3241() {
-        const span4Away = document.querySelectorAll(".Player-oneAway, .Player-twoAway, .Player-threeAway");
+        const span4 = document.querySelectorAll(".Player-one, .Player-two, .Player-three");
 
-        const span6Away = document.querySelectorAll(".Player-fourAway, .Player-fiveAway");
+        const span6 = document.querySelectorAll(".Player-four, .Player-five");
 
-        const span3Away = document.querySelectorAll(".Player-sixAway, .Player-sevenAway, .Player-eightAway, .Player-nineAway");
+        const span3 = document.querySelectorAll(".Player-six, .Player-seven, .Player-eight, .Player-nine");
 
-        const span12Away = document.getElementsByClassName('Player-tenAway')[0];
-        span12Away.style.setProperty('grid-row', 'span 12');
+        const span12 = document.getElementsByClassName('Player-ten')[0];
+        span12.style.setProperty('grid-row', 'span 12');
         
-        for (var i = 0, lin = span4Away.length; i < lin; i++) {
-            span4Away[i].style.setProperty("grid-row", "span 4");
+        for (var i = 0, lin = span4.length; i < lin; i++) {
+            span4[i].style.setProperty("grid-row", "span 4");
         }
 
-        for (var i = 0, lin = span6Away.length; i < lin; i++) {
-            span6Away[i].style.setProperty("grid-row", "span 6");
+        for (var i = 0, lin = span6.length; i < lin; i++) {
+            span6[i].style.setProperty("grid-row", "span 6");
         }
 
-        for (var i = 0, lin = span3Away.length; i < lin; i++) {
-            span3Away[i].style.setProperty("grid-row", "span 3");
+        for (var i = 0, lin = span3.length; i < lin; i++) {
+            span3[i].style.setProperty("grid-row", "span 3");
         }
     }
 
