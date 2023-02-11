@@ -719,6 +719,7 @@ td {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   font-size: 13px;
 }
 
@@ -895,6 +896,9 @@ td {
   .PlayersTeamUl {
     font-size: 15px;
   }
+  .DivButtonsPag {
+    padding-top: 40px;
+  }
   .ButtonPlayersTeam {
     font-size: 14px;
   }
@@ -989,6 +993,7 @@ td {
   .PlayersTeamUl {
     width: 90%;
     margin-top: 0px;
+    padding-top: 6px;
     padding-left: 10px;
     font-size: 13px;
   }
@@ -999,9 +1004,8 @@ td {
     font-size: 13px;
   }
   .DivButtonsPag {
-    padding-top: 38px;
+    padding-top: 53px;
   }
-
   .FeaturesPlayerUl {
     width: 92%;
     margin: 0px auto;
@@ -1124,7 +1128,7 @@ td {
     height: auto;
   }
   .TeamLogo {
-    width: 14%;
+    width: 13%;
     height: 65%;
   }
   .TitleTeam {
@@ -1309,7 +1313,7 @@ td {
         'list detailsTeam detailsTeam'
         'list stadiumPhoto stadiumPhoto'
         'playersTeam detailsPlayer performancePlayer';
-    grid-template-rows: 12% 14% 35% 39%;
+    grid-template-rows: 11% 14% 35% 39%;
     grid-template-columns: 33% 33% 34%;
   }
   .HeaderPage {
@@ -1363,20 +1367,20 @@ td {
     font-size: 17px;
   }
   .FeaturesTeamUl {
-    margin-top: 9px;
-    margin-left: 5px;
+    margin-top: 13px;
+    margin-left: 13px;
     font-size: 14px;
   }
   .TitleDivPlayers {
     font-size: 17px;
   }
   .PlayersTeamUl {
-    margin-top: -11px;
-    padding-left: 11px;
+    margin-top: 1px;
+    padding-left: 14px;
     font-size: 14px;
   }
   .DivButtonsPag {
-    padding-top: 1px;
+    padding-top: 30px;
     padding-bottom: 17px;
   }
   .PagePlayersTeam {
@@ -1402,7 +1406,7 @@ td {
   .FeaturesPlayerUlTwo {
     width: 100%;
     padding-top: 1px;
-    padding-left: 10px;
+    padding-left: 13px;
     display: grid;
     font-size: 14px;
   }
@@ -1635,7 +1639,7 @@ td {
   }
   .TeamsUl {
     width: 80%;
-    margin-left: -17px;
+    margin-left: -24px;
     padding-top: 4px;
     display: grid;
   }
@@ -1660,7 +1664,7 @@ td {
   }
   .FeaturesTeamUl {
     margin-top: 12px;
-    margin-left: -21px;
+    margin-left: -23px;
     font-size: 13px;
   }
   .FeaturesTeamLi {
@@ -1673,7 +1677,7 @@ td {
   }
   .PlayersTeamUl {
     padding-top: 8px;
-    padding-left: 17px;
+    padding-left: 16px;
     font-size: 13px;
   }
   .DivButtonsPag {
@@ -1884,6 +1888,7 @@ td {
     font-size: 13px;
   }
   .ClubCoachLineupsHome {
+    margin-bottom: -13px;
     font-size: 12px;
   }
   .DivLineupsHome {
@@ -1897,6 +1902,7 @@ td {
     width: 95%;
   }
   .ClubCoachLineupsAway {
+    margin-bottom: -13px;
     font-size: 12px;
   }
   .DivLineupsAway {
