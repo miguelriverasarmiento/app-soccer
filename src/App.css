@@ -205,7 +205,8 @@ a:hover {
 }
 
 .TitleDivPlayers {
-  padding-top: 5px;
+  margin-top: -10px;
+  padding-top: 0px;
   font-size: 20px;
   text-align: center;
   text-shadow: 3px 1px 2px rgba(171, 171, 171, 1);
@@ -213,7 +214,7 @@ a:hover {
 
 .PlayersTeamUl {
   width: 85%;
-  margin-top: -6px;
+  margin-top: -8px;
   padding-left: 15px;
   font-size: small;
   line-height: 1.4;
@@ -1380,7 +1381,7 @@ td {
     font-size: 14px;
   }
   .DivButtonsPag {
-    padding-top: 30px;
+    padding-top: 10px;
     padding-bottom: 17px;
   }
   .PagePlayersTeam {
