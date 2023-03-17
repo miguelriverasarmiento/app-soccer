@@ -55,6 +55,7 @@ export async function searchTeamStadium(id = 33){
                 return _handleError(response.status);
             }
             const data = await response.json();
+            console.log(data);
             return data;
     } catch (err) {
         _throwSpecificError(err);
@@ -74,7 +75,6 @@ export async function searchPlayerDetails(id = 882){
                 return _handleError(response.status);
             }
             const data = await response.json();
-            console.log(data);
             return data;
     } catch (err) {
         _throwSpecificError(err);
