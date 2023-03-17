@@ -275,7 +275,7 @@ a:hover {
 }
 
 .FeaturesPlayerUl {
-  width: 108%;
+  width: 92%;
   margin-top: 22px;
   margin-left: -26px;
   margin-bottom: 52px;
@@ -1116,13 +1116,13 @@ td {
     font-size: 17px;
   }
   .TeamsUl {
-    width: 95%;
-    margin-left: -37px;
+    width: 92%;
+    margin-left: -33px;
     padding-top: 10px;
     display: grid;
   }
   .TeamsLi {
-    font-size: 14px;
+    font-size: 13px;
   }
   .DivTeamLogo {
     width: 75%;
@@ -1137,9 +1137,9 @@ td {
     font-size: 20px;
   }
   .FeaturesTeamUl {
-    margin-top: 9px;
+    margin-top: 10px;
     margin-left: 5px;
-    font-size: 14px;
+    font-size: 13px;
   }
   .TitleDivPlayers {
     text-align: center;
@@ -1149,10 +1149,10 @@ td {
     width: 90%;
     margin-top: -7px;
     padding-left: 9px;
-    font-size: 14px;
+    font-size: 13px;
   }
   .DivButtonsPag {
-    padding-top: 1px;
+    padding-top: 10px;
     padding-bottom: 17px;
   }
   .PagePlayersTeam {
@@ -1163,25 +1163,27 @@ td {
     font-size: 13px;
   }
   .DivPhotoPlayer {
-    width: 65%;
+    width: 55%;
+    margin: 0px auto;
   }
   .OnePhotoPlayer {
-    width: 99%;
+    width: 100%;
   }
   .FeaturesPlayerUl {
     width: 92%;
     margin: 0px auto;
-    padding-top: 24px;
+    padding-top: 20px;
     padding-left: 8px;
-    font-size: 14px;
+    font-size: 13px;
   }
   .FeaturesPlayerUlTwo {
     width: 100%;
+    margin-top: 10px;
     padding-top: 1px;
     padding-left: 8px;
     display: grid;
     grid-template-columns: auto auto auto;
-    font-size: 14px;
+    font-size: 13px;
   }
   /* ---------------------------Page Posiciones ------------------------------*/
   .BodyPos {
@@ -1368,8 +1370,8 @@ td {
     font-size: 17px;
   }
   .FeaturesTeamUl {
-    margin-top: 13px;
-    margin-left: 13px;
+    margin-top: 11px;
+    margin-left: 12px;
     font-size: 14px;
   }
   .TitleDivPlayers {
@@ -1392,7 +1394,7 @@ td {
     font-size: 13px;
   }
   .DivPhotoPlayer {
-    width: 65%;
+    width: 56%;
   }
   .OnePhotoPlayer {
     width: 99%;
