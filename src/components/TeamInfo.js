@@ -1,7 +1,7 @@
 import { useEffect, useState, memo } from 'react';
 import { searchTeamStadium } from '../api/soccer';
 import tottenhamImage from '../assets/tottenham-Image.jpg';
-import brentfordImage from '../assets/brentford-stadium.jpg';
+import brentfordImage from '../assets/bren-stadium.jpg';
 import '../App.css';
 
 const TeamInfo = ({ idTeam, handleError }) => {
@@ -15,9 +15,9 @@ const TeamInfo = ({ idTeam, handleError }) => {
     }, [idTeam, handleError]);
 
     function imageStadiumTeam(item) {
-        if (item === "https://media.api-sports.io/football/venues/593.png") {
+        if (item === "https://media-3.api-sports.io/football/venues/593.png") {
             return <img className='StadiumLogo' src={tottenhamImage}/> 
-        } else if (item === "https://media.api-sports.io/football/venues/10503.png") {
+        } else if (item === "https://media-2.api-sports.io/football/venues/10503.png") {
             return <img className='StadiumLogo' src={brentfordImage}/> 
         } else {
             return <img className='StadiumLogo' src={item}/>
