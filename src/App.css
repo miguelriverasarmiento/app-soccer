@@ -170,7 +170,7 @@ a:hover {
 }
 
 .FeaturesTeamUl {
-  margin-top: 2px;
+  margin-top: 6px;
   margin-left: 10px;
   margin-bottom: 14px;
   font-size: small;
@@ -236,7 +236,8 @@ a:hover {
   width: 45%;
   height: 5%;
   margin: 0px auto;
-  padding-top: 6px;
+  margin-top: 33px;
+  padding-top: px;
   display: flex;
   justify-content: center;
 }
@@ -846,6 +847,7 @@ td {
 
   /* ---------------------------------------- Page Equipos ----------------------------------*/
   .App {
+    grid-template-rows: 23% 25% 51%;
     grid-template-columns: 17% 27% 18% 18% 18.8%;
   }
   .PageMenu {
@@ -938,6 +940,7 @@ td {
 @media all and (min-width: 959px) and (max-width: 1023px) { 
 
   .App {
+    grid-template-rows: 20% 23% 49%;
     grid-template-columns: 17% 27% 18% 18% 18.8%;
   }
   .PageMenu {
@@ -1137,8 +1140,8 @@ td {
     font-size: 20px;
   }
   .FeaturesTeamUl {
-    margin-top: 10px;
-    margin-left: 5px;
+    margin-top: 8px;
+    margin-left: 9px;
     font-size: 13px;
   }
   .TitleDivPlayers {
