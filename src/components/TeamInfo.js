@@ -15,9 +15,9 @@ const TeamInfo = ({ idTeam, handleError }) => {
     }, [idTeam, handleError]);
 
     function imageStadiumTeam(item) {
-        if (item === "https://media-3.api-sports.io/football/venues/593.png") {
+        if (item?.split('/')[5] === "593.png") {
             return <img className='StadiumLogo' src={tottenhamImage}/> 
-        } else if (item === "https://media-2.api-sports.io/football/venues/10503.png") {
+        } else if (item?.split('/')[5] === "10503.png") {
             return <img className='StadiumLogo' src={brentfordImage}/> 
         } else {
             return <img className='StadiumLogo' src={item}/>
