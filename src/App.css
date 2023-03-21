@@ -877,7 +877,7 @@ td {
     width:10%;
   }
   .TitleTeam {
-    margin-top: 47px;
+    margin-top: 52px;
     margin-left: 15px;
     font-size: 22px;
   }
@@ -940,7 +940,7 @@ td {
 @media all and (min-width: 959px) and (max-width: 1023px) { 
 
   .App {
-    grid-template-rows: 20% 23% 49%;
+    grid-template-rows: 22% 25% 52%;
     grid-template-columns: 17% 27% 18% 18% 18.8%;
   }
   .PageMenu {
@@ -967,13 +967,13 @@ td {
     font-size: 13px;
   }
   .DivTeamLogo {
-    width: 69%;
+    width: 99%;
     height: auto;
   }
   .TeamLogo {
-    margin-top: 25px;
-    width: 13%;
-    height: 57%;
+    margin-top: 23px;
+    width: 9%;
+    height: 62%;
   }
   .TitleTeam {
     font-size: 19px;
@@ -988,7 +988,7 @@ td {
   }
   .FeaturesTeamUl {
     margin-top: 13px;
-    margin-left: 9px;
+    margin-left: 8px;
     font-size: 13px;
   }
   .TitleDivPlayers {
@@ -1014,7 +1014,7 @@ td {
     width: 92%;
     margin: 0px auto;
     padding-top: 32px;
-    padding-left: 10px;
+    padding-left: 6px;
     font-size: 13px;
   }
   .FeaturesPlayerUlTwo {
@@ -1151,7 +1151,7 @@ td {
   .PlayersTeamUl {
     width: 90%;
     margin-top: -7px;
-    padding-left: 9px;
+    padding-left: 10px;
     font-size: 13px;
   }
   .DivButtonsPag {
@@ -1163,7 +1163,7 @@ td {
     padding-top: 0px;
   }
   .ButtonPlayersTeam {
-    font-size: 13px;
+    font-size: 12px;
   }
   .DivPhotoPlayer {
     width: 55%;
